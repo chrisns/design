@@ -36,7 +36,8 @@ That confirmed what the sites are: hand-pasted copies of one system that has sin
 
 | Path | What it is |
 |---|---|
-| `colors_and_type.css` | **The tokens.** Colour, type, spacing, radii, shadows, motion, layout. The only file a consumer strictly needs. |
+| `tokens.css` | **The tokens.** Colour, type, spacing, radii, shadows, motion, layout, and the font `@import`. Nothing but custom properties. |
+| `colors_and_type.css` | `tokens.css` plus the semantic type layer (`.h1`, `.lede`, `.eyebrow`, `code`, `p`) and a base reset. |
 | `preview/*.html` | Cards for the Claude Design pane. Each links the real kit CSS and uses real class names, so a preview cannot drift from the thing it documents. |
 | `ui_kits/blog/` | blog.cns.me — masthead, lead post, post grid, year archive, prose, figures, author block. |
 | `ui_kits/talks/` | talks.cns.me — guilloche masthead, hero, talk grid, schedule, booking strip, colophon. |
@@ -50,14 +51,27 @@ That confirmed what the sites are: hand-pasted copies of one system that has sin
 
 ## Consuming it
 
-Every kit CSS assumes `colors_and_type.css` is already loaded. Load it first, then the kit you need:
+**Pick the right entry point.** This matters more than it looks:
+
+| You want | Link |
+|---|---|
+| Tokens only — no element or class rules | `tokens.css` |
+| Tokens + semantic type + base reset | `colors_and_type.css` |
+
+`colors_and_type.css` styles bare `p`, `code`, `a`, `hr` and classes like `.label` and `.numeral`. Only **blog.cns.me** has ever had that layer. talks and govbuy inlined the `:root` block alone, so handing them the full file silently restyles their `<code>` elements and mono labels. Both take `tokens.css`.
+
+Then the kit:
 
 ```html
-<link rel="stylesheet" href="…/colors_and_type.css">
-<link rel="stylesheet" href="…/ui_kits/blog/blog.css">
+<link rel="stylesheet" href="…/tokens.css">
+<link rel="stylesheet" href="…/ui_kits/talks/talks.css">
 ```
 
-The tokens file `@import`s all three fonts from Google Fonts, at the union of every weight and axis the three sites request. **Consumers should not add their own font tag** — that was the source of several near-miss weight mismatches.
+`tokens.css` `@import`s all three fonts at the union of every weight the three sites request. **Consumers should not add their own font tag.**
+
+### The one visual change
+
+Fraunces is a variable font, and a browser clamps to the heaviest instance you actually requested. The three sites asked for different italic ranges — blog 400–500, govbuy 400–600, talks 400–700 — so the shared union (400–700) renders italic display text on blog and govbuy a notch heavier than before. It is closer to the `font-weight: 900` those rules actually specify. Affected: the italic `me` in the wordmark, and `em` inside display headings. talks is unaffected, and renders byte-identically.
 
 ---
 
@@ -65,11 +79,13 @@ The tokens file `@import`s all three fonts from Google Fonts, at the union of ev
 
 `npm test` fails the build on:
 
-1. **A `var(--x)` that resolves nowhere.** Caught govbuy referencing `--ease` and `--maxw`, which never existed — they are `--ease-out` and `--maxw-page`.
+1. **A `var(--x)` that resolves nowhere**, in a kit or in `colors_and_type.css` itself. Caught govbuy referencing `--ease` and `--maxw`, which never existed — they are `--ease-out` and `--maxw-page`.
 2. **A raw brand hex where a token exists.** 35 literals across the three kits are now `var()`. A design system where changing `--pink` doesn't change everything is decoration.
 3. **A preview with a dead reference or no `@dsCard` marker.** A broken card renders blank in the Design pane and nobody notices.
 
-It also *reports*, without failing, drift in the shared class vocabulary. That is a decision, not a lint — see below.
+It also fails if `colors_and_type.css` starts defining tokens of its own — they belong in `tokens.css`, once.
+
+It *reports*, without failing, drift in the shared class vocabulary. That is a decision, not a lint — see below.
 
 ---
 
@@ -90,6 +106,18 @@ Converging them changes live rendering on three deployed sites, so it is deliber
 **The slide theme never got the rebrand.** `ui_kits/slides-legacy/cns.css` is the marp theme behind every deck. It uses a blue-grey and amber palette and `@import-theme "gaia"` — no pink, no Fraunces. It is captured here as-is, unconverted, with no preview card: it extends a marp base that cannot be rendered faithfully in a standalone HTML page.
 
 ---
+
+## Verifying a change
+
+Rendering equivalence is checked by diffing computed styles, not by eyeballing. Load the production page and the kit page in two same-origin iframes, freeze animations (`animation:none`), and compare ~26 computed properties per element:
+
+| Page | Elements compared | Identical |
+|---|---|---|
+| talks | 674 | **674** |
+| blog | 568 | 566 — 2 italic glyph widths |
+| govbuy | 867 | 862 — 2 italic glyph widths, 3 JS-driven chat nodes |
+
+Freezing animations matters: without it the blog masthead pulse and govbuy's chat demo sample at different points in their timelines and produce dozens of phantom colour diffs.
 
 ## Content fundamentals
 

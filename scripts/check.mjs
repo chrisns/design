@@ -28,7 +28,14 @@ const TOKEN_FOR_HEX = {
 };
 
 const defined = (css) => new Set([...css.matchAll(/^\s*(--[\w-]+)\s*:/gm)].map((m) => m[1]));
-const canon = defined(read("colors_and_type.css"));
+const canon = defined(read("tokens.css"));
+
+// colors_and_type.css is a consumer of the tokens too — it must not reference one
+// that does not exist, and it must not define any of its own.
+for (const [, tok] of read("colors_and_type.css").matchAll(/var\(\s*(--[\w-]+)/g))
+  if (!canon.has(tok)) errors.push(`colors_and_type.css: var(${tok}) resolves nowhere`);
+if (defined(read("colors_and_type.css")).size)
+  errors.push("colors_and_type.css defines tokens; they belong in tokens.css");
 
 for (const kit of KITS) {
   const css = read(kit);
@@ -78,7 +85,7 @@ const drifted = shared.filter((c) => {
   return !(a === b && b === d);
 });
 
-console.log(`tokens in canon        ${canon.size}`);
+console.log(`tokens in tokens.css   ${canon.size}`);
 console.log(`shared classes         ${shared.length} (${drifted.length} drifted between kits)`);
 if (drifted.length) console.log(`  drifted: ${drifted.join(", ")}`);
 
