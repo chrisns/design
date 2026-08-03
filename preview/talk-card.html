@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Talk card" subtitle="Numbered catalogue card — real talks.cns.me markup" viewport="700x300" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Talk card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/talks/talks.css">
+<style>
+  html,body { margin:0; }
+  body { padding:28px 32px; background:var(--paper); }
+  .prev-note { font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em;
+                text-transform:uppercase; color:var(--ink-4); margin:0 0 14px; }
+</style>
+</head>
+<body>
+<div class="page"><article class="talk-card">
+ <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=k1TYMMxgldY">
+  <div class="talk-thumb fill-warm">
+   <img alt="" class="thumb-img" loading="lazy" onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" src="../assets/samples/nginx.png"/>
+   <span aria-hidden="true" class="thumb-glyph">
+    🦩
+   </span>
+  </div>
+ </a>
+ <h3 class="talk-title">
+  <a href="https://www.youtube.com/watch?v=k1TYMMxgldY">
+   Microservices Security Pattern in Kubernetes
+  </a>
+ </h3>
+ <p class="talk-desc">
+  How do I secure my APIs and apps to be production-ready? In this session, you'll learn about the sidecar pattern and policies that can make your services more secure and resilient, including a live hacking demo.
+ </p>
+ <div class="talk-formats">
+  <a class="format-tag html" href="#">
+   HTML
+  </a>
+  <a class="format-tag pdf" href="#">
+   PDF
+  </a>
+  <a class="format-tag pptx" href="#">
+   PPTX
+  </a>
+  <a class="format-tag txt" href="#">
+   TXT
+  </a>
+ </div>
+</article>
+
+<article class="talk-card">
+ <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=o1U9k-Ng8D0">
+  <div class="talk-thumb fill-hot">
+   <img alt="" class="thumb-img" loading="lazy" onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" src="../assets/samples/ProactiveClusterAutoscalingInKubernetes.png"/>
+   <span aria-hidden="true" class="thumb-glyph">
+    🦩
+   </span>
+  </div>
+ </a>
+ <h3 class="talk-title">
+  <a href="https://www.youtube.com/watch?v=o1U9k-Ng8D0">
+   Proactive cluster autoscaling in Kubernetes
+  </a>
+ </h3>
+ <p class="talk-desc">
+  Scaling nodes in a Kubernetes cluster could take several minutes with the default settings. In this webinar, Chris will demo live how you can configure Pod Priorities and a placeholder pod to pre-warm node instances for quicker scaling. By the end of the session, you will master how to align the Horizontal Pod Autoscaler and Cluster Autoscaler for blazing fast scaling even with occasional traffic spikes.
+ </p>
+ <div class="talk-formats">
+  <a class="format-tag html" href="#">
+   HTML
+  </a>
+  <a class="format-tag pdf" href="#">
+   PDF
+  </a>
+  <a class="format-tag pptx" href="#">
+   PPTX
+  </a>
+  <a class="format-tag txt" href="#">
+   TXT
+  </a>
+ </div>
+</article>
+</div>
+</body>
+</html>

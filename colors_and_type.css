@@ -1,0 +1,321 @@
+/* ============================================================
+   CNS Design System — Core Tokens
+   Chris Nesbitt-Smith / cns.me
+   Pink-forward editorial; UK gov digital thought leadership.
+   ============================================================ */
+
+/* ---------- Typography ----------------------------------- */
+/* Union of every weight/axis the blog, talks and govbuy surfaces request, so
+   consumers link this file alone and never need their own Google Fonts tag. */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+:root {
+  /* ----- Type families ----- */
+  --font-display: "Fraunces", "Times New Roman", ui-serif, serif;
+  --font-body:    "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ----- Type scale (1.25 ratio, generous display end) ----- */
+  --t-xs:    0.75rem;   /* 12 */
+  --t-sm:    0.875rem;  /* 14 */
+  --t-base:  1rem;      /* 16 */
+  --t-md:    1.125rem;  /* 18 */
+  --t-lg:    1.375rem;  /* 22 */
+  --t-xl:    1.75rem;   /* 28 */
+  --t-2xl:   2.25rem;   /* 36 */
+  --t-3xl:   3rem;      /* 48 */
+  --t-4xl:   4rem;      /* 64 */
+  --t-5xl:   5.5rem;    /* 88 */
+  --t-6xl:   8rem;      /* 128 */
+
+  /* ----- Weights ----- */
+  --w-light: 300;
+  --w-reg:   400;
+  --w-med:   500;
+  --w-semi:  600;
+  --w-bold:  700;
+  --w-black: 900;
+
+  /* ----- Tracking ----- */
+  --tr-tight:  -0.03em;
+  --tr-snug:   -0.015em;
+  --tr-normal: 0;
+  --tr-loose:  0.04em;
+  --tr-eyebrow: 0.18em;
+
+  /* ----- Leading ----- */
+  --lh-tight: 1.05;
+  --lh-snug:  1.2;
+  --lh-body:  1.55;
+  --lh-loose: 1.75;
+
+  /* ============================================================
+     COLOR — Brand pink. Hot, saturated, magenta-leaning.
+     The kind a man wears as trousers. Not bubblegum, not pastel.
+     ============================================================ */
+
+  /* Pink ramp (oklch for control) */
+  --pink-50:  oklch(96% 0.025 350);
+  --pink-100: oklch(92% 0.06  350);
+  --pink-200: oklch(85% 0.12  350);
+  --pink-300: oklch(76% 0.19  350);
+  --pink-400: oklch(68% 0.24  350);
+  --pink-500: oklch(62% 0.27  350);   /* primary */
+  --pink-600: oklch(54% 0.26  352);
+  --pink-700: oklch(45% 0.22  354);
+  --pink-800: oklch(36% 0.17  356);
+  --pink-900: oklch(26% 0.11  358);
+
+  /* The hero — the "pink trousers" pink. Hex pinned for brand. */
+  --pink:        #E5197F;   /* primary brand pink */
+  --pink-hot:    #FF2D8A;   /* punchier, for hover/spotlight */
+  --pink-deep:   #B30E61;   /* press / shadows / type on cream */
+  --pink-ink:    #5A0830;   /* deepest — rare, for accents */
+
+  /* Neutrals — warm, paper-like cream and a near-black ink. */
+  --ink:      #14110F;      /* primary text, almost-black */
+  --ink-2:    #2A2622;      /* secondary text */
+  --ink-3:    #5C544C;      /* tertiary, captions */
+  --ink-4:    #8A8077;      /* disabled / hint */
+  --rule:     #1F1B17;      /* hairline rules on cream */
+
+  --paper:    #F4EFE7;      /* primary background — warm cream */
+  --paper-1:  #F4EFE7;      /* alias of --paper for legacy refs */
+  --paper-2:  #EBE4D8;      /* card / sunken surfaces */
+  --paper-3:  #DDD3C2;      /* borders on paper, dividers */
+  --bone:     #FBF8F2;      /* lightest, modal / lifted */
+
+  --white:    #FFFFFF;
+  --black:    #14110F;      /* alias of --ink for clarity */
+
+  /* Inverse mode (dark / hero blocks) */
+  --night:    #14110F;
+  --night-2:  #221E1A;
+  --night-3:  #3A332D;
+
+  /* Semantic */
+  --ok:       #1F7A4D;
+  --warn:     #C57A12;
+  --err:      var(--pink-deep);
+  --info:     #1E4FA8;
+
+  /* Foreground / background semantic aliases */
+  --fg-1: var(--ink);
+  --fg-2: var(--ink-2);
+  --fg-3: var(--ink-3);
+  --fg-4: var(--ink-4);
+  --fg-on-pink: var(--bone);
+  --fg-on-ink:  var(--paper);
+  --fg-on-ink-2: #D8CFC4;   /* muted text on an ink surface — lede under an inverse headline */
+  --rule-on-ink: #4A443E;   /* hairline / ghost-button border on an ink surface */
+
+  --bg-1: var(--paper);
+  --bg-2: var(--paper-2);
+  --bg-3: var(--paper-3);
+  --bg-lift: var(--bone);
+  --bg-ink:  var(--ink);
+  --bg-pink: var(--pink);
+
+  --accent:        var(--pink);
+  --accent-hover:  var(--pink-hot);
+  --accent-press:  var(--pink-deep);
+  --link:          var(--pink-deep);
+  --link-hover:    var(--pink);
+
+  /* ============================================================
+     Spacing — 4px base, generous editorial scale
+     ============================================================ */
+  --s-0:   0;
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   24px;
+  --s-6:   32px;
+  --s-7:   48px;
+  --s-8:   64px;
+  --s-9:   96px;
+  --s-10: 128px;
+  --s-11: 160px;
+  --s-12: 240px;
+
+  /* ----- Radii ----- */
+  --r-0:   0;
+  --r-1:   2px;
+  --r-2:   4px;
+  --r-3:   8px;
+  --r-pill: 999px;
+  /* Note: brand favors sharp / squared corners. r-3 is the max for cards. */
+
+  /* ----- Borders ----- */
+  --bw-hair:  1px;
+  --bw-rule:  2px;     /* editorial rule weight */
+  --bw-bold:  4px;
+
+  /* ----- Shadows — used sparingly. Editorial = mostly flat. ----- */
+  --sh-0: none;
+  --sh-1: 0 1px 0 rgba(20,17,15,0.08);
+  --sh-2: 0 2px 8px -2px rgba(20,17,15,0.12), 0 1px 0 rgba(20,17,15,0.06);
+  --sh-3: 0 12px 24px -12px rgba(20,17,15,0.22), 0 2px 0 rgba(20,17,15,0.08);
+  --sh-pink: 0 12px 32px -12px rgba(229,25,127,0.45);
+  --sh-press: inset 0 2px 0 rgba(20,17,15,0.18);
+
+  /* ----- Motion ----- */
+  --ease-out:  cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in:   cubic-bezier(0.6, 0, 0.8, 0.4);
+  --ease-pop:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:  120ms;
+  --dur:       220ms;
+  --dur-slow:  400ms;
+
+  /* ----- Layout ----- */
+  --maxw-prose:     68ch;
+  --maxw-content:   1080px;
+  --maxw-page:      1320px;
+}
+
+/* ============================================================
+   Semantic type styles
+   ============================================================ */
+
+.h-display,
+.h1 {
+  font-family: var(--font-display);
+  font-weight: var(--w-black);
+  font-size: clamp(var(--t-3xl), 6vw, var(--t-5xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  color: var(--fg-1);
+  font-variation-settings: "opsz" 144;
+  text-wrap: balance;
+}
+
+.h-display em,
+.h1 em {
+  font-style: italic;
+  font-weight: var(--w-bold);
+  color: var(--pink);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: clamp(var(--t-2xl), 4vw, var(--t-3xl));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-snug);
+  color: var(--fg-1);
+  font-variation-settings: "opsz" 96;
+  text-wrap: balance;
+}
+
+.h3 {
+  font-family: var(--font-display);
+  font-weight: var(--w-semi);
+  font-size: var(--t-xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-snug);
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+
+.h4 {
+  font-family: var(--font-body);
+  font-weight: var(--w-semi);
+  font-size: var(--t-lg);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: var(--w-med);
+  font-size: var(--t-xs);
+  letter-spacing: var(--tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--pink-deep);
+}
+
+.lede {
+  font-family: var(--font-display);
+  font-weight: var(--w-reg);
+  font-size: var(--t-lg);
+  line-height: var(--lh-body);
+  color: var(--fg-2);
+  font-style: italic;
+  text-wrap: pretty;
+}
+
+.body,
+p {
+  font-family: var(--font-body);
+  font-weight: var(--w-reg);
+  font-size: var(--t-base);
+  line-height: var(--lh-body);
+  color: var(--fg-2);
+  text-wrap: pretty;
+}
+
+.small,
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--t-sm);
+  line-height: var(--lh-body);
+  color: var(--fg-3);
+}
+
+.code,
+code,
+kbd {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  font-weight: var(--w-med);
+  color: var(--fg-1);
+  background: var(--paper-2);
+  padding: 0.1em 0.35em;
+  border-radius: var(--r-1);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  font-weight: var(--w-med);
+  letter-spacing: var(--tr-loose);
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.numeral {
+  font-family: var(--font-mono);
+  font-weight: var(--w-med);
+  font-feature-settings: "tnum" 1;
+  color: var(--fg-3);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+html, body {
+  background: var(--bg-1);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur) var(--ease-out);
+}
+a:hover { color: var(--link-hover); }
+
+::selection { background: var(--pink); color: var(--bone); }
+
+hr {
+  border: 0;
+  border-top: var(--bw-rule) solid var(--rule);
+  margin: var(--s-7) 0;
+}

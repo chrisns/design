@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Buttons" subtitle="Primary pill · ghost square · on-pink — real .btn classes" viewport="700x220" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/blog/blog.css">
+<style>
+  html,body { margin:0; }
+  body { padding:28px 32px; background:var(--paper); }
+  .lbl { font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase;
+          color:var(--ink-4); margin:0 0 6px; }
+  .sw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:10px; }
+  .sw { height:64px; border:1px solid var(--paper-3); display:flex; align-items:flex-end; padding:6px; }
+  .sw span { font-family:var(--font-mono); font-size:9px; letter-spacing:0.06em; }
+  .row { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+</style>
+</head>
+<body>
+<p class="lbl">On cream</p><div class="row"><a class="btn btn-primary" href="#">Browse the catalogue</a><a class="btn btn-ghost" href="#">See the schedule</a></div><div style="background:var(--pink);padding:20px;margin-top:14px"><p class="lbl" style="color:var(--bone)">On pink</p><a class="btn btn-on-pink" href="#">Book a talk</a></div>
+</body>
+</html>

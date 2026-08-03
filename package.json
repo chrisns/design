@@ -1,0 +1,24 @@
+{
+  "name": "@chrisns/design",
+  "version": "1.0.0",
+  "description": "The CNS design system — tokens, UI kits and brand assets behind blog.cns.me, talks.cns.me and govbuy.run.cns.me",
+  "license": "MIT",
+  "author": "Chris Nesbitt-Smith",
+  "repository": { "type": "git", "url": "git+https://github.com/chrisns/design.git" },
+  "type": "module",
+  "main": "colors_and_type.css",
+  "style": "colors_and_type.css",
+  "exports": {
+    ".": "./colors_and_type.css",
+    "./colors_and_type.css": "./colors_and_type.css",
+    "./blog": "./ui_kits/blog/blog.css",
+    "./talks": "./ui_kits/talks/talks.css",
+    "./govbuy": "./ui_kits/govbuy/govbuy.css",
+    "./assets/*": "./assets/*",
+    "./package.json": "./package.json"
+  },
+  "files": ["colors_and_type.css", "ui_kits", "assets", "preview", "SKILL.md", "README.md"],
+  "scripts": {
+    "test": "node scripts/check.mjs"
+  }
+}

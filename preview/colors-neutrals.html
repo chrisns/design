@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Neutrals — ink & paper" subtitle="Warm near-black on warm cream; no cool greys" viewport="700x300" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Neutrals — ink & paper</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body { margin:0; }
+  body { padding:28px 32px; background:var(--paper); }
+  .lbl { font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase;
+          color:var(--ink-4); margin:0 0 6px; }
+  .sw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:10px; }
+  .sw { height:64px; border:1px solid var(--paper-3); display:flex; align-items:flex-end; padding:6px; }
+  .sw span { font-family:var(--font-mono); font-size:9px; letter-spacing:0.06em; }
+  .row { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+</style>
+</head>
+<body>
+<p class="lbl">Ink — type</p><div class="sw-grid">
+<div class="sw" style="background:var(--ink)"><span style="color:var(--bone)">ink</span></div>
+<div class="sw" style="background:var(--ink-2)"><span style="color:var(--bone)">ink-2</span></div>
+<div class="sw" style="background:var(--ink-3)"><span style="color:var(--bone)">ink-3</span></div>
+<div class="sw" style="background:var(--ink-4)"><span style="color:var(--bone)">ink-4</span></div>
+<div class="sw" style="background:var(--rule)"><span style="color:var(--bone)">rule</span></div>
+</div><p class="lbl" style="margin-top:18px">Paper — surfaces</p><div class="sw-grid">
+<div class="sw" style="background:var(--bone)"><span style="color:var(--ink)">bone</span></div>
+<div class="sw" style="background:var(--paper)"><span style="color:var(--ink)">paper</span></div>
+<div class="sw" style="background:var(--paper-2)"><span style="color:var(--ink)">paper-2</span></div>
+<div class="sw" style="background:var(--paper-3)"><span style="color:var(--ink)">paper-3</span></div>
+</div>
+</body>
+</html>

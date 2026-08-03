@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- @dsCard group="Type" name="Body & lede" subtitle="Fraunces italic lede over Hanken body, 68ch measure" viewport="700x260" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Body & lede</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body { margin:0; }
+  body { padding:28px 32px; background:var(--paper); }
+  .lbl { font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase;
+          color:var(--ink-4); margin:0 0 6px; }
+  .sw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:10px; }
+  .sw { height:64px; border:1px solid var(--paper-3); display:flex; align-items:flex-end; padding:6px; }
+  .sw span { font-family:var(--font-mono); font-size:9px; letter-spacing:0.06em; }
+  .row { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+</style>
+</head>
+<body>
+<p class="lbl">.lede</p><p class="lede" style="margin:0 0 14px;max-width:var(--maxw-prose)">I have been in and around uk government digital stuff for a long time.</p><p class="lbl">.body</p><p class="body" style="margin:0;max-width:var(--maxw-prose)">Prose caps at 68ch, always. The measure is the single most reliable thing you can get right; everything else is decoration you can argue about later. Links sit in <a href="#">pink-deep</a> and warm to pink on hover.</p>
+</body>
+</html>

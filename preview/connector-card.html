@@ -1,0 +1,45 @@
+<!doctype html>
+<!-- @dsCard group="App — GovBuy" name="Connector card" subtitle="Code sample card with copy affordance" viewport="700x320" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Connector card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../ui_kits/govbuy/govbuy.css">
+<style>
+  html,body { margin:0; }
+  body { padding:28px 32px; background:var(--paper); }
+  .prev-note { font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em;
+                text-transform:uppercase; color:var(--ink-4); margin:0 0 14px; }
+</style>
+</head>
+<body>
+<div class="page"><article class="conn-card">
+ <div class="conn-head">
+  <h3>
+   Claude — one-click plugin ★
+  </h3>
+  <span class="conn-kind">
+   Bundles the MCP + a skill + slash commands
+  </span>
+ </div>
+ <div class="conn-codewrap">
+  <pre class="conn-code">/plugin marketplace add chrisns/govbuy
+/plugin install govbuy@cns</pre>
+  <button aria-label="Copy Claude — one-click plugin ★ config" class="copy-btn conn-copy" data-copy="/plugin marketplace add chrisns/govbuy
+/plugin install govbuy@cns">
+   Copy
+  </button>
+ </div>
+ <div class="conn-foot">
+  <span>
+   Then run /govbuy:start. Approve the MCP server when prompted.
+  </span>
+  <a class="conn-docs" href="https://github.com/chrisns/govbuy/tree/main/plugins/govbuy" rel="noopener" target="_blank">
+   Docs →
+  </a>
+ </div>
+</article>
+</div>
+</body>
+</html>

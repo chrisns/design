@@ -1,0 +1,509 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Blog" name="blog.cns.me — post" subtitle="Title block, hero plate, prose measure, figures, author block" viewport="1320x1600" -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Curse of Seeing Code — Cloudy with a chance of freefall</title>
+    <meta name="description" content="Down at the bottom of a Star Trek episode I watched as a child -- &quot; Ship in a Bottle ,&quot; The Next Generation, 1993 -- there is a moment that has never left me. Professor Moriarty ,…">
+    <link rel="canonical" href="https://www.linkedin.com/pulse/curse-seeing-code-chris-nesbitt-smith-twtpc">
+    <link rel="alternate" type="application/rss+xml" title="Cloudy with a chance of freefall" href="https://blog.cns.me/feed.xml">
+    <link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="blog.css">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Curse of Seeing Code">
+    <meta property="og:description" content="Down at the bottom of a Star Trek episode I watched as a child -- &quot; Ship in a Bottle ,&quot; The Next Generation, 1993 -- there is a moment that has never left me. Professor Moriarty ,…">
+    <meta property="og:url" content="https://blog.cns.me/posts/curse-seeing-code-chris-nesbitt-smith-twtpc/">
+    <meta property="og:image" content="https://linkedinrss.cns.me/img/aHR0cHM6Ly9tZWRpYS5saWNkbi5jb20vZG1zL2ltYWdlL3YyL0Q0RTEyQVFIdlVadnk1V1Nac3cvYXJ0aWNsZS1jb3Zlcl9pbWFnZS1zaHJpbmtfNzIwXzEyODAvQjRFWnouTEs4MUlFQUktLzAvMTc3Mzc5MDg3NTI2MT9lPTIxNDc0ODM2NDcmdj1iZXRhJnQ9bFl3SDNJQVQ4cFpmVllGQXpVNy14Z3B5ZmsyLXJDTDNQVUlPSkhaRHZmMA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@chrisns">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CELB7DHP9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5CELB7DHP9');
+    </script>
+  </head>
+  <body>
+    <main class="page" data-screen-label="Post">
+      <header class="masthead">
+        <svg class="masthead-guilloche" aria-hidden="true" viewBox="0 0 1600 120" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="masthead-weave" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+              <path d="M 0 24 Q 12 0 24 24 T 48 24" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <path d="M 0 24 Q 12 48 24 24 T 48 24" fill="none" stroke="currentColor" stroke-width="0.5" />
+            </pattern>
+          </defs>
+          <g class="guilloche-drift">
+            <rect x="-200" y="0" width="2000" height="120" fill="url(#masthead-weave)" />
+          </g>
+        </svg>
+
+        <div class="rule top draw-rule"></div>
+        <div class="masthead-row">
+          <a class="brand" href="/">
+            <span class="brand-cns">cns</span>
+            <span class="brand-dot"></span>
+            <span class="brand-me">me</span>
+            <span class="brand-blog">/ blog</span>
+            <svg class="brand-flourish" aria-hidden="true" viewBox="0 0 220 14" preserveAspectRatio="none">
+              <path d="M 2 8 C 30 2, 70 12, 110 6 S 190 4, 218 8" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </a>
+          <span class="masthead-meta">
+            <em>Cloudy with a Chance of Freefall</em>
+          </span>
+          <span class="masthead-count">
+            <span class="masthead-pulse" aria-hidden="true">🦩</span>
+          </span>
+        </div>
+        <div class="rule draw-rule delay-1"></div>
+        <nav class="masthead-nav">
+          <div class="nav-left">
+            <a href="/">Index</a>
+            <a href="https://talks.cns.me">Talks</a>
+            <a href="https://github.com/chrisns">GitHub</a>
+            <a href="https://www.linkedin.com/in/chrisns/">LinkedIn</a>
+          </div>
+          <div class="nav-right">
+            <a href="https://blog.cns.me/feed.xml">RSS</a>
+          </div>
+        </nav>
+        <div class="rule draw-rule delay-2"></div>
+        
+      </header>
+
+      <article class="post measure-regular post--head">
+  <header class="post-header">
+    <div class="post-header-meta">
+      <a href="/" class="post-back">← Index</a>
+      <span class="post-sep">|</span>
+      <span class="post-date">16 June 2026</span>
+      <span class="post-sep">|</span>
+      <span class="post-rt">10 min read</span>
+    </div>
+    <h1 class="post-h1">The Curse of Seeing Code</h1>
+  </header>
+</article>
+
+
+<figure class="post-hero-photo">
+  <div class="frame">
+    <img src="https://linkedinrss.cns.me/img/aHR0cHM6Ly9tZWRpYS5saWNkbi5jb20vZG1zL2ltYWdlL3YyL0Q0RTEyQVFIdlVadnk1V1Nac3cvYXJ0aWNsZS1jb3Zlcl9pbWFnZS1zaHJpbmtfNzIwXzEyODAvQjRFWnouTEs4MUlFQUktLzAvMTc3Mzc5MDg3NTI2MT9lPTIxNDc0ODM2NDcmdj1iZXRhJnQ9bFl3SDNJQVQ4cFpmVllGQXpVNy14Z3B5ZmsyLXJDTDNQVUlPSkhaRHZmMA" alt="" loading="lazy">
+  </div>
+  
+    <figcaption>AI Generated: A parent sees code where the child sees a blank screen — the distance between their worlds rendered in light</figcaption>
+  
+</figure>
+
+
+<article class="post measure-regular post--body">
+  <div class="post-body">
+    
+                  
+
+    <div>
+        <p>
+          <span>Down at the bottom of a Star Trek episode I watched as a child -- "</span><span><a href="https://memory-alpha.fandom.com/wiki/Ship_In_A_Bottle_(episode)" target="_blank">Ship in a Bottle</a></span><span>," The Next Generation, 1993 -- there is a moment that has never left me. </span><span><a href="https://memory-alpha.fandom.com/wiki/James_Moriarty" target="_blank">Professor Moriarty</a></span><span>, a </span><span><a href="https://memory-alpha.fandom.com/wiki/Holodeck" target="_blank">holodeck</a></span><span> character who has become self-aware, manipulates the crew into believing the holodeck is reality. At the end, Picard stares at the small device containing Moriarty's simulated universe and says, quietly: </span><span><a href="https://en.wikipedia.org/wiki/Ship_in_a_Bottle_(Star_Trek:_The_Next_Generation)" target="_blank">"Our reality may be very much like theirs."</a></span><span> I was perhaps ten years old. I already knew how to program. And I remember thinking: if I could scrape the edge of the holodeck wall -- dig my fingernails into the seam where the simulation meets the projector -- I would find code underneath.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>Not metaphorical code. Actual code. Variables, functions, conditionals, loops. The building blocks I had already been arranging on a screen since before I could ride a bicycle. I was certain that the world had an underlying syntax, and that I was one of the people who could read it.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>I am not alone in this conviction, and I never was. I am, however, increasingly alone in my household.</span>
+        </p>
+    </div>
+  
+                  
+    
+
+    
+      <div rel="ugc">
+        
+      <figure>
+        <img alt="Article content" src="https://linkedinrss.cns.me/img/aHR0cHM6Ly9tZWRpYS5saWNkbi5jb20vZG1zL2ltYWdlL3YyL0Q0RTEyQVFGRXlTd3FldUFLZVEvYXJ0aWNsZS1pbmxpbmVfaW1hZ2Utc2hyaW5rXzQwMF83NDQvQjRFWnouRzVQX0lVQVktLzAvMTc3Mzc4OTc0OTE0OD9lPTIxNDc0ODM2NDcmdj1iZXRhJnQ9TUREeWtSMW5fZjV0X2g2Y0NHSG9meFlENnFrUE5QQ0hRUXlBSjFSUHhyQQ">
+          <figcaption>
+            <span>AI Generated: Seeing the world differently perpetuates loneliness</span>
+          </figcaption>
+      </figure>
+    
+      </div>
+  
+  
+                  
+
+    <div>
+        <h3><span>The Fist on the Wire</span></h3>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>In 1844, when Samuel Morse sent "What hath God wrought" along a wire from Washington to Baltimore, he created a new class of human being. Not instantly -- these things never happen instantly -- but within a decade, telegraph operators had developed an entire insider culture. They recognised each other by </span><span><a href="https://en.wikipedia.org/wiki/The_Victorian_Internet" target="_blank">"fist"</a></span><span> -- the distinctive rhythm of a hand on a telegraph key, as unique as a fingerprint, impossible to fake. They married each other. They spoke in abbreviations that civilians could not parse. They had, in the language of Charles Goodwin's anthropology, developed a </span><span><a href="https://anthrosource.onlinelibrary.wiley.com/doi/10.1525/aa.1994.96.3.02a00100" target="_blank">professional vision</a></span><span> -- a trained way of seeing the world that was invisible to everyone outside their guild.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>This is what happens to every generation of technologists. The telegraph operators became a tribe. Half a century later, ham radio operators replicated the pattern almost exactly. Kristen Haring, writing in MIT Press, describes how </span><span><a href="https://mitpress.mit.edu/9780262582766/ham-radios-technical-culture/" target="_blank">"outsiders viewed ham operators with a mixture of awe and suspicion"</a></span><span> -- a sentence that could have been written about programmers in 1985 or AI engineers in 2026. The operators could hear signal in noise. They could decode meaning from static. They believed, with absolute sincerity, that their trained perception gave them access to a layer of reality that non-operators simply could not see.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>Then came the MIT hackers of the 1960s and 1970s. Steven Levy wrote that for those early programmers, </span><span><a href="https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution" target="_blank">"the code held a beauty of its own"</a></span><span> -- an aesthetic experience available only to the initiated. Then William Gibson gave us cyberspace in 1984: </span><span><a href="https://en.wikipedia.org/wiki/Neuromancer" target="_blank">"a consensual hallucination"</a></span><span>, a world made of data that only hackers could navigate. Then in 1999, The Matrix gave every programmer alive a creation myth they could inhabit. As Vice documented years later, an entire generation of technologists </span><span><a href="https://www.vice.com/en/article/how-the-matrix-inspired-a-new-generation-of-hackers/" target="_blank">"fully identified with Neo"</a></span><span> -- the chosen one who sees the green rain of code behind the surface of ordinary life.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+          <h2>
+            <span>I was one of them....I am still one of them.</span>
+          </h2>
+    </div>
+  
+                  
+
+    <div>
+        <h3><span>The Melody Only I Can Hear</span></h3>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>Here is the thing I cannot explain to my wife or my children, despite wanting to more than almost anything in the world. When I look at a queue in a supermarket, I see a scheduling algorithm. When I watch traffic lights, I see state machines. When my son describes a decision he is wrestling with -- this friend or that friend, this activity or that activity -- I see a conditional tree with weighted branches. When someone tells me a recipe, I hear a function with parameters. This is not a party trick. It is not something I switch on. It is the water I swim in.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>I know how this sounds. Every generation of technologists, from the telegraph operators to the ham radio enthusiasts to the MIT hackers, has believed they perceive the world more clearly than everyone else. The French have a </span><span><a href="https://en.wikipedia.org/wiki/D%C3%A9formation_professionnelle" target="_blank">term for it</a></span><span> -- </span><span>deformation professionnelle</span><span> -- the tendency of a trained professional to see everything through the lens of their training, and to mistake that lens for a window. The architect sees load-bearing walls where you see a kitchen. The doctor sees symptoms where you see a headache. The programmer sees algorithms where you see life.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>Now. You might object that this is a general property of expertise, not something special about code. The surgeon sees anatomy where you see a person. The chess grandmaster sees patterns where you see pieces. Fair enough. </span><span>Deformation professionnelle</span><span> is universal. But here is why code is different, and the difference matters.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>In 2020, an MIT team led by Anna Ivanova </span><span><a href="https://news.mit.edu/2020/brain-reading-computer-code-1215" target="_blank">put programmers in an fMRI scanner</a></span><span> and asked them to read code. The code activated neither the brain's language centres nor its mathematical centres. It activated the multiple demand network -- a general-purpose cognitive system used for complex problem-solving. In that study, reading code appeared to be neurologically distinct from reading English and from doing maths. It is its own thing. There is no queue in nature that looks like a scheduling algorithm until code teaches you to see it that way. The brain builds an entirely new perceptual architecture, and once that architecture is in place, you cannot unbuild it.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>This is what I mean by </span><span>coding learns you</span><span>. There is </span><span><a href="https://arxiv.org/abs/1808.03916" target="_blank">research suggesting exactly this</a></span><span> -- that programming languages shape thought in ways analogous to the </span><span><a href="https://en.wikipedia.org/wiki/Linguistic_relativity" target="_blank">Sapir-Whorf hypothesis</a></span><span> for natural languages. But the coding version is stronger than Sapir-Whorf. The language you program in does not merely give you a vocabulary for describing the world. It installs a new perceptual layer between you and the world. You do not just learn to code. Coding learns you. It rewires what counts as signal and what counts as noise. And it does this so thoroughly that the original wiring -- the way you saw the world before -- is not archived somewhere, waiting to be restored. It is overwritten. Gone.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>Edsger Dijkstra saw this decades before the fMRI machines confirmed it. </span><span><a href="https://en.wikiquote.org/wiki/Edsger_W._Dijkstra" target="_blank">"The tools we use,"</a></span><span> he wrote, "have a profound and devious influence on our thinking habits, and, therefore, on our thinking abilities." He meant it as a warning. I experience it as a description of my daily life.</span>
+        </p>
+    </div>
+  
+                  
+    
+
+    
+      <div rel="ugc">
+        
+      <figure>
+        <img alt="Article content" src="https://linkedinrss.cns.me/img/aHR0cHM6Ly9tZWRpYS5saWNkbi5jb20vZG1zL2ltYWdlL3YyL0Q0RTEyQVFIOUJURXlta3dQR0EvYXJ0aWNsZS1pbmxpbmVfaW1hZ2Utc2hyaW5rXzQwMF83NDQvQjRFWnouSDk3Q0hFQVktLzAvMTc3Mzc5MDAzMDQ0ND9lPTIxNDc0ODM2NDcmdj1iZXRhJnQ9dlFEQTVtUXNidVo3cjRxTEdiMEVBZDhFLVVHUzMtc0ZVRTBKaEgyaTJ1QQ">
+          <figcaption>
+            <span>AI Generated: A Victorian telegraph operator at a wooden desk, fingers on a brass key, wires above transforming into modern digital code</span>
+          </figcaption>
+      </figure>
+    
+      </div>
+  
+  
+                  
+
+    <div>
+        <h3><span>Then Like Now</span></h3>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>Let me tell you what the problem looks like.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>I sit down with my son. He is bright, curious, entirely capable. I want to teach him to code. I want to give him the thing that was given to me -- not a skill, but a way of seeing. I open an editor. I type a variable assignment. And I realise, with a lurch of something close to vertigo, that I cannot explain what a variable is. Not really. Not from scratch. I know what a variable is in the way I know what walking is. I know it so completely that the original learning has been composted into instinct. The psychologists call this </span><span><a href="https://en.wikipedia.org/wiki/Procedural_knowledge" target="_blank">knowledge compilation</a></span><span>: declarative knowledge -- the explicit steps, the conscious reasoning -- gets compiled into procedural knowledge, and the original steps are garbage-collected. Gone. Unrecoverable.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>In 1990, a Stanford PhD student named Elizabeth Newton conducted an experiment that demolished a century of assumptions about expert communication. She divided participants into "tappers" and "listeners." The tappers tapped out the rhythm of well-known songs. The listeners tried to identify them. The tappers predicted that listeners would recognise the songs </span><span><a href="https://www.bkwpartners.com/tappers-and-listeners-an-excerpt-from-one-of-my-favorite-communications-books-and-a-story-i-tell-clients-often/" target="_blank">50% of the time. The actual rate was 2.5%</a></span><span>. The tappers, who could hear the melody in their heads, could not imagine what it was like to hear only tapping.</span>
+        </p>
+    </div>
+  
+                    
+    
+
+    
+  
+                  
+
+    <div>
+        <p>
+          <span>I am a tapper. I have been tapping for well over thirty years. The melody is so loud in my head that I genuinely cannot reconstruct the silence.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>Michael Polanyi named this in 1966: </span><span><a href="https://medium.com/quotes-in-context/qinc-polanyi-we-know-more-than-we-can-tell-330b2a55fd73" target="_blank">"We know more than we can tell."</a></span><span> The </span><span><a href="https://en.wikipedia.org/wiki/Dreyfus_model_of_skill_acquisition" target="_blank">Dreyfus model of skill acquisition</a></span><span> formalised the consequence: experts make the worst novice teachers because they have forgotten what it feels like not to know. Greg Wilson, who has thought about this more carefully than almost anyone in computing education, puts it with painful precision: </span><span><a href="https://teachtogether.tech/en/" target="_blank">"Experts can no longer imagine what it's like to not see the world that way."</a></span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>But the coding version of this curse is worse than the surgeon's or the musician's, and it is worse for a specific reason. The surgeon can point to the body. The musician can play the note. These are shared sensory objects -- the student may not see what the expert sees, but they see </span><span>something</span><span>. The programmer points at a supermarket queue and says "that is a scheduling algorithm" and the other person sees... a queue. There is no shared sensory object. The perceptual layer that coding installed is entirely internal.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>This is the trade-off nobody names. Perceptual depth versus communicative reach. The deeper coding rewires your perception, the more you see -- and the less of what you see is transmissible to anyone who has not been similarly rewired. You gain resolution. You lose communion.</span>
+        </p>
+    </div>
+  
+                  
+    
+
+    
+      <div rel="ugc">
+        
+      <figure>
+        <img alt="Article content" src="https://linkedinrss.cns.me/img/aHR0cHM6Ly9tZWRpYS5saWNkbi5jb20vZG1zL2ltYWdlL3YyL0Q0RTEyQVFGY1pLQ2pVS1dwaXcvYXJ0aWNsZS1pbmxpbmVfaW1hZ2Utc2hyaW5rXzQwMF83NDQvQjRFWnouSkc1QklnQVktLzAvMTc3Mzc5MDMyOTQ2Nz9lPTIxNDc0ODM2NDcmdj1iZXRhJnQ9QWNFX2M4RC01VXhBQUVYd0hIdTJTbDFpazhTY01aeWtpN3czLVVFUklnTQ">
+          <figcaption>
+            <span>AI Generated: A chess grandmaster staring at the same board as a child, one sees the patterns, the other sees thirty-two wooden pieces</span>
+          </figcaption>
+      </figure>
+    
+      </div>
+  
+  
+                  
+
+    <div>
+        <h3><span>The Distance Is the Point</span></h3>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>Richard Feynman was once challenged by an artist friend who claimed that a scientist's analytical eye destroyed the beauty of a flower. Feynman's response has become famous: </span><span><a href="https://fs.blog/richard-feynman-on-beauty/" target="_blank">"I see much more about the flower than he sees."</a></span><span> The knowledge of cells, of evolution, of the intricate chemical processes, added layers of wonder. It did not subtract beauty. It multiplied it.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>I believe Feynman. I also think he was being disingenuous. Because what he did not say -- what nobody who makes this argument ever says -- is that the additional seeing comes with an additional distance. You see more, but you see it from further away. The flower is more beautiful AND more separate from you. You are an observer of the world's machinery, not merely a participant in its garden. And no amount of pedagogical technique -- no Feynman method, no Suzuki approach, no chunking strategy -- can close that distance. The techniques can help you teach. They cannot help you unsee.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>This is the spine of the thing. Not "programmers are special" -- Dan North, who has thought hard about what programming actually is, wrote a piece called </span><span><a href="https://dannorth.net/blog/programming-is-not-a-craft/" target="_blank">"Programming Is Not a Craft"</a></span><span> that challenged the self-mythology of the developer community, and he was right to do so. Jacob Kaplan-Moss went further, arguing against the </span><span><a href="https://lwn.net/Articles/641779/" target="_blank">"programming talent myth"</a></span><span> that sorts people into "can code" and "can't code" as though it were a binary gift from birth. They are both right. And yet.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>And yet the distance persists. Coding learns you, and what it teaches you cannot be unlearnt, and what it shows you cannot be pointed at. The conditional trees do not vanish from the supermarket queue because you have acknowledged your </span><span>deformation professionnelle</span><span>. You cannot unsee the code any more than the telegraph operator could unhear the fist.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>The real question -- the one that sits in my chest when my daughter shows me something she has made and I instinctively see the algorithm she could have used to make it better, faster, more elegant, and I have to bite my tongue because she does not want an algorithm, she wants her father to be proud -- the real question is not about teaching.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>It is about identity. About what it costs to have a perceptual system that your own family cannot share.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <h3><span>The Holodeck Wall</span></h3>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>I never did scrape the edges of the holodeck. I grew up, and the fantasy faded, and it turned out that the code underneath reality -- if it exists at all -- is mathematical rather than computational, and I am no Stephen Hawking. My code is higher-level than that: not physics, but programming. Not the machine code of the universe, but the interpreted language of systems, patterns, abstractions.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>But I keep going back to Picard's line. "Our reality may be very much like theirs." Not because I think we live in a simulation -- that argument bores me -- but because the line captures something true about what it means to have spent decades training your brain to see structure where others see surface. You begin to wonder whether the structure you see is real or whether you have simply become so good at projecting it that you can no longer tell the difference.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>The code is not the world. But the code does change how you see the world. And once changed, you do not go back.</span>
+        </p>
+    </div>
+  
+                  
+    
+
+    
+      <div rel="ugc">
+        
+      <figure>
+        <img alt="Article content" src="https://linkedinrss.cns.me/img/aHR0cHM6Ly9tZWRpYS5saWNkbi5jb20vZG1zL2ltYWdlL3YyL0Q0RTEyQVFFU1Fua3dFNE44SWcvYXJ0aWNsZS1pbmxpbmVfaW1hZ2Utc2hyaW5rXzQwMF83NDQvQjRFWnouSnM1WkpFQVktLzAvMTc3Mzc5MDQ4NDk5Mz9lPTIxNDc0ODM2NDcmdj1iZXRhJnQ9WVQ3Nmd5eDhwVU9teDJqQ1JlVHhiRmN6RHlEOW1fQ1RrX002WkxuOGZSaw">
+          <figcaption>
+            <span>AI Generated: a different digital divide </span>
+          </figcaption>
+      </figure>
+    
+      </div>
+  
+  
+                  
+
+    <div>
+        <p>
+          <span>That is what I think about at half past eight on a Wednesday evening when my son asks me to explain why a loop works and I open my mouth and discover that I am a tapper, and all he can hear is the tapping, and the melody that makes it all make sense is playing only in my head. Coding learnt me so well that I cannot find the door back to the room where he is standing.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>The curse of seeing code is not that you see too much. It is that you see alone.</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <span>(Views in this article are my own.)</span>
+        </p>
+    </div>
+  
+                  
+
+    <div>
+        <p>
+          <br>
+        </p>
+    </div>
+  
+              
+  </div>
+
+  <div class="post-endmark">🦩</div>
+
+  <footer class="post-footer">
+    <div class="post-footer-meta">
+      Originally published on <a href="https://www.linkedin.com/pulse/curse-seeing-code-chris-nesbitt-smith-twtpc" rel="canonical">LinkedIn</a>.
+    </div>
+    <div class="post-footer-share">
+      <span class="share-label">Share</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.cns.me%2Fposts%2Fcurse-seeing-code-chris-nesbitt-smith-twtpc%2F">LinkedIn</a>
+      <a href="https://www.linkedin.com/pulse/curse-seeing-code-chris-nesbitt-smith-twtpc">Original</a>
+    </div>
+  </footer>
+</article>
+
+
+      <footer class="colophon">
+        <div class="orn">🦩</div>
+        <div class="colophon-grid">
+          <div>
+            <p class="cl-p meta">© <span class="numeral">2026</span> Chris Nesbitt-Smith — all words my own.</p>
+            <p class="cl-p">Originally published on <a href="https://www.linkedin.com/newsletters/cloudy-with-chance-of-freefall-7439561267528458241/"><em>LinkedIn</em></a>; rendered hourly from <a href="https://github.com/chrisns/cns-blog">github.com/chrisns/cns-blog</a>.</p>
+          </div>
+          <div>
+            <h4 class="cl-h">Elsewhere</h4>
+            <ul class="cl-list">
+              <li><a href="https://www.linkedin.com/in/chrisns/">LinkedIn</a></li>
+              <li><a href="https://talks.cns.me">talks.cns.me</a></li>
+              <li><a href="https://github.com/chrisns">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="cl-h">Subscribe</h4>
+            <p class="cl-p">Get the next one in your <em>inbox,</em> not your algorithm. <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7439561267528458241" target="_blank" rel="noopener">Subscribe on LinkedIn →</a></p>
+            <p class="cl-p meta"><a href="https://blog.cns.me/feed.xml">RSS</a></p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

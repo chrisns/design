@@ -1,0 +1,797 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Talks" name="talks.cns.me — catalogue" subtitle="Guilloche masthead, hero, talk grid, schedule, booking strip" viewport="1320x1400" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Chris Nesbitt-Smith — talks about software development</title>
+<meta name="title" content="Chris Nesbitt-Smith talks about software development" />
+<meta name="description" content="A back catalogue of conference talks, workshops and webinars by Chris Nesbitt-Smith — Kubernetes, platform engineering, policy as code, and digital government." />
+<meta name="theme-color" content="#F4EFE7" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://talks.cns.me/" />
+<meta property="og:title" content="Chris Nesbitt-Smith — talks" />
+<meta property="og:description" content="A back catalogue of conference talks, workshops and webinars by Chris Nesbitt-Smith." />
+<meta property="og:image" content="https://talks.cns.me/images/me.png" />
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://talks.cns.me/" />
+<meta property="twitter:title" content="Chris Nesbitt-Smith — talks" />
+<meta property="twitter:description" content="A back catalogue of conference talks, workshops and webinars by Chris Nesbitt-Smith." />
+<meta property="twitter:image" content="https://talks.cns.me/images/me.png" />
+
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="talks.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BF3VN6JZZG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BF3VN6JZZG');
+</script>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <svg class="masthead-guilloche" aria-hidden="true" viewBox="0 0 1600 120" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <pattern id="masthead-weave" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+        <path d="M 0 24 Q 12 0 24 24 T 48 24" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+        <path d="M 0 24 Q 12 48 24 24 T 48 24" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+      </pattern>
+    </defs>
+    <g class="guilloche-drift">
+      <rect x="-200" y="0" width="2000" height="120" fill="url(#masthead-weave)"></rect>
+    </g>
+  </svg>
+  <div class="rule top draw-rule"></div>
+  <div class="masthead-row">
+    <a class="brand" href="https://cns.me">
+      <span class="brand-cns">cns</span>
+      <span class="brand-dot"></span>
+      <span class="brand-me">me</span>
+      <span class="brand-blog">/ talks</span>
+      <svg class="brand-flourish" aria-hidden="true" viewBox="0 0 220 14" preserveAspectRatio="none">
+        <path d="M 2 8 C 30 2, 70 12, 110 6 S 190 4, 218 8" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"></path>
+      </svg>
+    </a>
+    <span class="masthead-meta"><em>A back catalogue</em></span>
+  </div>
+  <div class="rule draw-rule delay-1"></div>
+  <nav class="masthead-nav">
+    <div class="nav-left">
+      <a href="#talks">Talks</a>
+      <a href="#gov">Gov.uk</a>
+      <a href="#schedule">Schedule</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://cns.me">LinkedIn</a>
+      <a href="https://blog.cns.me">Blog</a>
+      <a href="https://devpsyops.com">DevPsyOps</a>
+      <a href="https://github.com/chrisns">GitHub</a>
+    </div>
+  </nav>
+  <div class="rule draw-rule delay-2"></div>
+</header>
+
+<main>
+<section class="talks-hero">
+  <figure class="plate">
+    <div class="plate-frame">
+      <span class="plate-stamp">Available for talks</span>
+      <img src="images/me.png" alt="Chris Nesbitt-Smith" />
+    </div>
+    <figcaption>
+      <span class="caption">Plate I — <em>The author,</em> on stage.</span>
+      <span class="avail">talks.cns.me</span>
+    </figcaption>
+  </figure>
+
+  <div class="talks-hero-body">
+    <h1 class="talks-hero-headline">Talks on <em>Kubernetes,</em> platforms &amp; digital government.</h1>
+    <p class="talks-hero-lede">A working back catalogue of conference talks, workshops and webinars — covering platform engineering, <em>policy as [versioned] code,</em> multi&#8209;tenancy, and the realities of building digital services for the public.</p>
+    <div class="talks-hero-ctas">
+      <a class="btn btn-primary" href="#talks">Browse the catalogue →</a>
+      <a class="btn btn-ghost" href="#schedule">See schedule</a>
+    </div>
+    <div class="talks-hero-meta">
+      <div><span class="stat-num">17</span><span class="stat-cap">Talks indexed</span></div>
+      <div><span class="stat-num">48</span><span class="stat-cap">Sessions delivered</span></div>
+      <div><span class="stat-num">2021</span><span class="stat-cap">Catalogue est.</span></div>
+    </div>
+  </div>
+</section>
+
+
+<header class="section-header" id="talks">
+  <div class="rule strong"></div>
+  <div class="sh-row">
+    <span class="eyebrow">Selected talks</span>
+    <h2 class="sh-title">A working <em>catalogue.</em></h2>
+    <span class="sh-count"><span class="num">10</span><span class="cap">entries · curated</span></span>
+  </div>
+</header>
+
+
+<div class="talks-strip">
+  <span class="label">Filed under</span>
+  <span>Kubernetes</span><span class="sep">·</span><span>Policy as code</span><span class="sep">·</span><span>Platform engineering</span><span class="sep">·</span><span>Multi-tenancy</span><span class="sep">·</span><span>Cloud security</span>
+</div>
+
+<div class="talk-grid">
+  
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=k1TYMMxgldY">
+      <div class="talk-thumb fill-warm">
+        <img class="thumb-img" src="nginx.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=k1TYMMxgldY">Microservices Security Pattern in Kubernetes</a></h3>
+  <p class="talk-desc">How do I secure my APIs and apps to be production-ready? In this session, you'll learn about the sidecar pattern and policies that can make your services more secure and resilient, including a live hacking demo.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="nginx.html">HTML</a>
+    <a class="format-tag pdf"  href="nginx.pdf">PDF</a>
+    <a class="format-tag pptx" href="nginx.pptx">PPTX</a>
+    <a class="format-tag txt"  href="nginx.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=o1U9k-Ng8D0">
+      <div class="talk-thumb fill-hot">
+        <img class="thumb-img" src="ProactiveClusterAutoscalingInKubernetes.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=o1U9k-Ng8D0">Proactive cluster autoscaling in Kubernetes</a></h3>
+  <p class="talk-desc">Scaling nodes in a Kubernetes cluster could take several minutes with the default settings. In this webinar, Chris will demo live how you can configure Pod Priorities and a placeholder pod to pre-warm node instances for quicker scaling. By the end of the session, you will master how to align the Horizontal Pod Autoscaler and Cluster Autoscaler for blazing fast scaling even with occasional traffic spikes.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="ProactiveClusterAutoscalingInKubernetes.html">HTML</a>
+    <a class="format-tag pdf"  href="ProactiveClusterAutoscalingInKubernetes.pdf">PDF</a>
+    <a class="format-tag pptx" href="ProactiveClusterAutoscalingInKubernetes.pptx">PPTX</a>
+    <a class="format-tag txt"  href="ProactiveClusterAutoscalingInKubernetes.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=W-FYK8sgSKo">
+      <div class="talk-thumb fill-cool">
+        <img class="thumb-img" src="IsItTimeToPutYourPetKubernetesDown.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=W-FYK8sgSKo">Is It Time To Put Your Pet Kubernetes Down</a></h3>
+  <p class="talk-desc">Explores how Kubernetes is the new pet and the consequences that presents.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="IsItTimeToPutYourPetKubernetesDown.html">HTML</a>
+    <a class="format-tag pdf"  href="IsItTimeToPutYourPetKubernetesDown.pdf">PDF</a>
+    <a class="format-tag pptx" href="IsItTimeToPutYourPetKubernetesDown.pptx">PPTX</a>
+    <a class="format-tag txt"  href="IsItTimeToPutYourPetKubernetesDown.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="IsItTimeToPutYourPetKubernetesDownWebinar.html">
+      <div class="talk-thumb fill-paper">
+        <img class="thumb-img" src="IsItTimeToPutYourPetKubernetesDownWebinar.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="IsItTimeToPutYourPetKubernetesDownWebinar.html">Is It Time To Put Your Pet Kubernetes Down [webinar]</a></h3>
+  <p class="talk-desc">Explores how Kubernetes is the new pet and the consequences that presents.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="IsItTimeToPutYourPetKubernetesDownWebinar.html">HTML</a>
+    <a class="format-tag pdf"  href="IsItTimeToPutYourPetKubernetesDownWebinar.pdf">PDF</a>
+    <a class="format-tag pptx" href="IsItTimeToPutYourPetKubernetesDownWebinar.pptx">PPTX</a>
+    <a class="format-tag txt"  href="IsItTimeToPutYourPetKubernetesDownWebinar.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=vy9ms3_FIVE">
+      <div class="talk-thumb fill-warm">
+        <img class="thumb-img" src="LoftLabsMultitenancyCosts.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=vy9ms3_FIVE">Building a Multi-Tenanted Kubernetes Platform</a></h3>
+  <p class="talk-desc">In this session, you will explore the tools and techniques necessary to partition a cluster so that multiple teams can use it to deploy workloads.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="LoftLabsMultitenancyCosts.html">HTML</a>
+    <a class="format-tag pdf"  href="LoftLabsMultitenancyCosts.pdf">PDF</a>
+    <a class="format-tag pptx" href="LoftLabsMultitenancyCosts.pptx">PPTX</a>
+    <a class="format-tag txt"  href="LoftLabsMultitenancyCosts.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="LoftLabsMultitenancyIsolation.html">
+      <div class="talk-thumb fill-hot">
+        <img class="thumb-img" src="LoftLabsMultitenancyIsolation.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="LoftLabsMultitenancyIsolation.html">Balancing Isolation and Complexity in a Kubernetes Platform</a></h3>
+  <p class="talk-desc">In this session, you will explore the tools and techniques necessary to partition a cluster so that multiple teams can use it to deploy workloads.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="LoftLabsMultitenancyIsolation.html">HTML</a>
+    <a class="format-tag pdf"  href="LoftLabsMultitenancyIsolation.pdf">PDF</a>
+    <a class="format-tag pptx" href="LoftLabsMultitenancyIsolation.pptx">PPTX</a>
+    <a class="format-tag txt"  href="LoftLabsMultitenancyIsolation.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=AciaVw_R1f4">
+      <div class="talk-thumb fill-cool">
+        <img class="thumb-img" src="PodSecurityPolicyIsDeadLongLive.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=AciaVw_R1f4">Pod Security Policy is Dead, Long Live...?</a></h3>
+  <p class="talk-desc">What are Pod Security Policies? What do you mean, they are deprecated? What am I going to do?!</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="PodSecurityPolicyIsDeadLongLive.html">HTML</a>
+    <a class="format-tag pdf"  href="PodSecurityPolicyIsDeadLongLive.pdf">PDF</a>
+    <a class="format-tag pptx" href="PodSecurityPolicyIsDeadLongLive.pptx">PPTX</a>
+    <a class="format-tag txt"  href="PodSecurityPolicyIsDeadLongLive.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=YWQG_E7vgiQ">
+      <div class="talk-thumb fill-paper">
+        <img class="thumb-img" src="PolicyAsVersionedCode.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=YWQG_E7vgiQ">Policy as [versioned] code</a></h3>
+  <p class="talk-desc">In this talk Chris will trace back the origins of how policies are often incepted, how it can get out of hand, be slow if not impossible to update and measure compliance, and often lead us to question of is the policy helping or hindering. From this talk you'll learn how to use a software development pattern and product ways of thinking towards how your organization can manage policy; achieve continual updates to policy allowing the risk mitigations to move as fast as the risk does, not get in the way and be easy to measure compliance.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="PolicyAsVersionedCode.html">HTML</a>
+    <a class="format-tag pdf"  href="PolicyAsVersionedCode.pdf">PDF</a>
+    <a class="format-tag pptx" href="PolicyAsVersionedCode.pptx">PPTX</a>
+    <a class="format-tag txt"  href="PolicyAsVersionedCode.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=Nstv7OA4abo">
+      <div class="talk-thumb fill-warm">
+        <img class="thumb-img" src="PolicyAsVersionedCodeLightning.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=Nstv7OA4abo">Policy as [versioned] code (Lightning)</a></h3>
+  <p class="talk-desc">In this talk Chris will trace back the origins of how policies are often incepted, how it can get out of hand, be slow if not impossible to update and measure compliance, and often lead us to question of is the policy helping or hindering. From this talk you'll learn how to use a software development pattern and product ways of thinking towards how your organization can manage policy; achieve continual updates to policy allowing the risk mitigations to move as fast as the risk does, not get in the way and be easy to measure compliance.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="PolicyAsVersionedCodeLightning.html">HTML</a>
+    <a class="format-tag pdf"  href="PolicyAsVersionedCodeLightning.pdf">PDF</a>
+    <a class="format-tag pptx" href="PolicyAsVersionedCodeLightning.pptx">PPTX</a>
+    <a class="format-tag txt"  href="PolicyAsVersionedCodeLightning.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=WQP6xuUJAhE">
+      <div class="talk-thumb fill-hot">
+        <img class="thumb-img" src="DynamicWorkloadBalancing.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=WQP6xuUJAhE">Dynamic Workload Balancing and Resource Optimization in Kubernetes</a></h3>
+  <p class="talk-desc">In this talk, Chris will explore the challenges and benefits of dynamically balancing and optimizing the resources of a Kubernetes cluster. He will explain how Kubernetes uses a scheduler to assign pods to nodes based on various factors, such as resource requests, limits, affinity, anti-affinity, and taints. He will also demonstrate how to use tools and techniques, such as horizontal pod autoscaling, cluster autoscaling and the descheduler, to improve the performance and efficiency of your cluster. From this talk, you will learn how to leverage the power and flexibility of Kubernetes to achieve optimal resource utilization and workload distribution.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="DynamicWorkloadBalancing.html">HTML</a>
+    <a class="format-tag pdf"  href="DynamicWorkloadBalancing.pdf">PDF</a>
+    <a class="format-tag pptx" href="DynamicWorkloadBalancing.pptx">PPTX</a>
+    <a class="format-tag txt"  href="DynamicWorkloadBalancing.txt">TXT</a>
+  </div>
+</article>
+</div>
+
+
+<div class="section-break">🦩</div>
+
+
+<header class="section-header" id="gov">
+  <div class="rule strong"></div>
+  <div class="sh-row">
+    <span class="eyebrow">UK gov.</span>
+    <h2 class="sh-title"><em>DSIT</em> · GDS · CDDO</h2>
+    <span class="sh-count"><span class="num">7</span><span class="cap">briefings · public sector</span></span>
+  </div>
+</header>
+
+
+<div class="talks-strip">
+  <span class="label">Audiences</span>
+  <span>Permanent secretaries</span><span class="sep">·</span><span>Tech leadership</span><span class="sep">·</span><span>Cross-government</span>
+</div>
+
+<div class="talk-grid">
+  
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="CDDO-API-Intro.html">
+      <div class="talk-thumb fill-cool">
+        <img class="thumb-img" src="CDDO-API-Intro.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="CDDO-API-Intro.html">Understanding APIs in Government</a></h3>
+  <p class="talk-desc">A presentation on APIs for non-technical senior leaders</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="CDDO-API-Intro.html">HTML</a>
+    <a class="format-tag pdf"  href="CDDO-API-Intro.pdf">PDF</a>
+    <a class="format-tag pptx" href="CDDO-API-Intro.pptx">PPTX</a>
+    <a class="format-tag txt"  href="CDDO-API-Intro.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="CDDO-CMM-st1.html">
+      <div class="talk-thumb fill-paper">
+        <img class="thumb-img" src="CDDO-CMM-st1.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="CDDO-CMM-st1.html">CDDO Cloud Maturity Model Show+Tell 01</a></h3>
+  <p class="talk-desc">A show and tell talk describing the development of a cloud maturity model for the UK Public Sector</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="CDDO-CMM-st1.html">HTML</a>
+    <a class="format-tag pdf"  href="CDDO-CMM-st1.pdf">PDF</a>
+    <a class="format-tag pptx" href="CDDO-CMM-st1.pptx">PPTX</a>
+    <a class="format-tag txt"  href="CDDO-CMM-st1.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="CDDO-MSconf1-workshop.html">
+      <div class="talk-thumb fill-warm">
+        <img class="thumb-img" src="CDDO-MSconf1-workshop.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="CDDO-MSconf1-workshop.html">CDDO / Future of Cloud / Azure 2.0</a></h3>
+  
+  <div class="talk-formats">
+    <a class="format-tag html" href="CDDO-MSconf1-workshop.html">HTML</a>
+    <a class="format-tag pdf"  href="CDDO-MSconf1-workshop.pdf">PDF</a>
+    <a class="format-tag pptx" href="CDDO-MSconf1-workshop.pptx">PPTX</a>
+    <a class="format-tag txt"  href="CDDO-MSconf1-workshop.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="https://www.youtube.com/watch?v=89TG51e9KAA">
+      <div class="talk-thumb fill-hot">
+        <img class="thumb-img" src="CDDO-UKPSMP_ignite1.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="https://www.youtube.com/watch?v=89TG51e9KAA">UK Public Sector Cloud Marketplace Ignite</a></h3>
+  <p class="talk-desc">An ignite format talk, describing a vision for a UK Public Sector Cloud Marketplace</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="CDDO-UKPSMP_ignite1.html">HTML</a>
+    <a class="format-tag pdf"  href="CDDO-UKPSMP_ignite1.pdf">PDF</a>
+    <a class="format-tag pptx" href="CDDO-UKPSMP_ignite1.pptx">PPTX</a>
+    <a class="format-tag txt"  href="CDDO-UKPSMP_ignite1.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="GDS-CMM-st2.html">
+      <div class="talk-thumb fill-cool">
+        <img class="thumb-img" src="GDS-CMM-st2.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="GDS-CMM-st2.html">GDS Cloud Maturity Model Show+Tell 01</a></h3>
+  <p class="talk-desc">A show and tell talk describing the development of a cloud maturity model for the UK Public Sector</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="GDS-CMM-st2.html">HTML</a>
+    <a class="format-tag pdf"  href="GDS-CMM-st2.pdf">PDF</a>
+    <a class="format-tag pptx" href="GDS-CMM-st2.pptx">PPTX</a>
+    <a class="format-tag txt"  href="GDS-CMM-st2.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="GDS-NDX-GGF25.html">
+      <div class="talk-thumb fill-paper">
+        <img class="thumb-img" src="GDS-NDX-GGF25.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="GDS-NDX-GGF25.html">National Digital Exchange</a></h3>
+  <p class="talk-desc">A briefing presentation on the National Data Exchange to Global Government Forum Innovation 2025</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="GDS-NDX-GGF25.html">HTML</a>
+    <a class="format-tag pdf"  href="GDS-NDX-GGF25.pdf">PDF</a>
+    <a class="format-tag pptx" href="GDS-NDX-GGF25.pptx">PPTX</a>
+    <a class="format-tag txt"  href="GDS-NDX-GGF25.txt">TXT</a>
+  </div>
+</article>
+
+<article class="talk-card">
+  
+    <a class="talk-thumb-link" href="GDS-NDX-LOTI1.html">
+      <div class="talk-thumb fill-warm">
+        <img class="thumb-img" src="GDS-NDX-LOTI1.png" alt="" loading="lazy"
+             onerror="this.classList.add('hidden');this.parentElement.classList.add('thumb-fallback');" />
+        <span class="thumb-glyph" aria-hidden="true">🦩</span>
+      </div>
+    </a>
+  <h3 class="talk-title"><a href="GDS-NDX-LOTI1.html">NDX, Opportunities for London Boroughs</a></h3>
+  <p class="talk-desc">A 60-min session for the LOTI AI Community of Practice on what NDX:Try is, how London boroughs can use it today, and where the broader National Digital Exchange is heading. With Wing Lau, Hackney. Thu 21 May 2026, 13:00.</p>
+  <div class="talk-formats">
+    <a class="format-tag html" href="GDS-NDX-LOTI1.html">HTML</a>
+    <a class="format-tag pdf"  href="GDS-NDX-LOTI1.pdf">PDF</a>
+    <a class="format-tag pptx" href="GDS-NDX-LOTI1.pptx">PPTX</a>
+    <a class="format-tag txt"  href="GDS-NDX-LOTI1.txt">TXT</a>
+  </div>
+</article>
+</div>
+
+
+<section class="booking-strip">
+  <div class="booking-grid">
+    <div>
+      <span class="booking-eyebrow">Bookings</span>
+      <h2 class="booking-title">Conferences, in-house <em>workshops,</em> podcasts &amp; the occasional debate.</h2>
+    </div>
+    <div class="booking-cta">
+      <p>Currently only considering offers from organisations who agree that bureaucracy is an impediment to progress.</p>
+      <a class="btn-on-pink" href="/cdn-cgi/l/email-protection#3a59524853497a59544914575f">Drop a line →</a>
+    </div>
+  </div>
+</section>
+
+
+<header class="section-header" id="schedule">
+  <div class="rule strong"></div>
+  <div class="sh-row">
+    <span class="eyebrow">Schedule</span>
+    <h2 class="sh-title">Where <em>next,</em> where recently.</h2>
+    <span class="sh-count"><span class="num">UTC</span><span class="cap">listed reverse-chron</span></span>
+  </div>
+</header>
+
+<div class="schedule-wrap">
+  
+<div class="schedule-sub">
+  <span class="ss-eyebrow">Upcoming</span>
+  <h3 class="ss-title">On the books</h3>
+  <span class="ss-count">0 confirmed</span>
+</div>
+  <p class="schedule-empty">Nothing on the books just now. <a href="/cdn-cgi/l/email-protection#3b58534952487b58554815565e">Get in touch</a> if you'd like to invite me to speak — workshops, conferences, podcasts, or in-house briefings.</p>
+
+  
+<div class="schedule-sub">
+  <span class="ss-eyebrow">Recent</span>
+  <h3 class="ss-title">Archived appearances</h3>
+  <span class="ss-count">48 archived · newest first</span>
+</div>
+  
+<table class="schedule">
+  <thead><tr><th scope="col">Date</th><th scope="col">Talk</th><th scope="col">Where</th></tr></thead>
+  <tbody>
+    <tr class="recent-row">
+        <td class="sched-date">2026-06-04</td>
+        <td class="sched-talk">Hands-on with NDX:Try</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://aws-experience.com/emea/smb/e/300f4/hands-on-with-ndxtry">AWS Loft, Amazon UK HQ, London</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2026-05-21</td>
+        <td class="sched-talk">NDX: Opportunities for London Boroughs</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.tickettailor.com/events/loti/2175502">LOTI AI Communities of Practice</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2026-04-28</td>
+        <td class="sched-talk">A Decade of Kubernetes Lessons</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://youtu.be/9IVk8j8RJd4">Queue-it podcast</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2025-03-27</td>
+        <td class="sched-talk">Balancing Isolation and Complexity in a Kubernetes Platform</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.vcluster.com/event/balancing-isolation-and-complexity-in-a-kubernetes-platform">LoftLabs vCluster 2025 workshops</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2025-03-26</td>
+        <td class="sched-talk">Introducing The National Digital Exchange</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://innovation.globalgovernmentforum.com/">Global Government Forum Innovation</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2025-03-25</td>
+        <td class="sched-talk">Introducing The National Digital Exchange</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://innovation.globalgovernmentforum.com/">Global Government Forum Innovation</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2024-12-12</td>
+        <td class="sched-talk">Introduction to API</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.eventbrite.co.uk/e/introduction-to-api-tickets-1055148520629">CDDO Spotlight Webinars</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2024-03-21</td>
+        <td class="sched-talk">Ignite: UK Public Sector Public Cloud Marketplace</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://innovation.globalgovernmentforum.com/transform-day2/">Global Government Forum</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2024-03-14</td>
+        <td class="sched-talk">Building a Multi-Tenanted Kubernetes Platform Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.vcluster.com/event/workshop-series-3/">LoftLabs vCluster 2024 workshops</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-12-07</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode hybrid">hybrid</span><a href="https://registration.livegroup.co.uk/govcybersecurityconference2023">Government Cyber Security Conference 2023</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-10-12</td>
+        <td class="sched-talk">Pod Security Policy is Dead, Long Live...?</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.devseccon.com/events/pod-security-policy-is-dead-long-live">DevSecCon Poland</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-10-12</td>
+        <td class="sched-talk">Dynamic Workload Balancing and Resource Optimization in Kubernetes</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://event.on24.com/eventRegistration/EventLobbyServlet?target=reg20.jsp&eventid=4320626&key=93C6D0A18B5B09B5806214AB622C65B6">Akamai: Doing More with Less</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-09-27</td>
+        <td class="sched-talk">Is it time to put your pet Kubernetes down</td>
+        <td class="sched-where"><span class="venue-mode hybrid">hybrid</span><a href="https://www.devseccon.com/events/rethinking-kubernetes-github-azure-passwordless-authentication">DevSecCon London</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-09-21</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.devseccon.com/events/policy-as-versioned-code-2">DevSecCon Germany</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-03-30</td>
+        <td class="sched-talk">Proactive cluster autoscaling in Kubernetes</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://youtu.be/sVLGhZWDZ-k">Conf42: CloudNative 2023</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-03-15</td>
+        <td class="sched-talk">Is it time to put your pet Kubernetes down</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=czpbXvZ7J_E">Civo: Disruptive Tech</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-02-16</td>
+        <td class="sched-talk">Pod Security Policy is Dead, Long Live...?</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=bpj5bRAJ2J0">Conf42 Chaos Engineering 2023</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-02-02</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=T9jlT2kTGlM">DevSecCon Netherlands</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-01-26</td>
+        <td class="sched-talk">Is it time to put your pet Kubernetes down</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=6-UTY50pGx8">Conf42: DevOps 2023</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2023-01-03</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=yUu8l7E2dR0">DevOps Monthly Online</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-12-08</td>
+        <td class="sched-talk">Is it time to put your pet Kubernetes down</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=8hIMmNMOtzE">HashiTalks</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-12-07</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=_NOmk8gRdXw">DevSecCon</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-12-01</td>
+        <td class="sched-talk">Proactive cluster autoscaling in Kubernetes</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=AF2FjGTBRUQ">Conf42: DevSecOps 2022</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-11-23</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=yL62l-XE268">Kubernetes Community Days UK 2022</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-11-10</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=Qm9a-jJWKak">Mobile DevOps Summit</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-11-03</td>
+        <td class="sched-talk">Is it time to put your pet Kubernetes down</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=6nDLDmSIBQ0">Devtron webinar</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-11-02</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.meetup.com/london-microsoft-devops/events/287854448/">London Microsoft DevOps Meetup</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-10-29</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=_-oE3646Tpw">India Cloud Security Summit</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-10-25</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=Nstv7OA4abo">GitOpsCon</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-10-24</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=_ItchT4okpA">Spinnaker Summit</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-10-19</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/live/LS9jKBKapkM?feature=share&t=3671">WeAreDevelopers Live - DevOps Day</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-10-15</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/live/Tlce19gYY9Q?feature=share&t=4257">OSCONF 2022</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-10-13</td>
+        <td class="sched-talk">Is it time to put your pet Kubernetes down</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://dtxucx.app.swapcard.com/widget/event/dtx-ucx-europe-2022-or-irx-2022/planning/UGxhbm5pbmdfMTAwNTc3MA==">DTX Europe</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-09-29</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=uYX8ffoiE5Y">Conf42 Incident Management</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-09-28</td>
+        <td class="sched-talk">Proactive cluster autoscaling in Kubernetes</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.linode.com/event/proactive-cluster-autoscaling-in-kubernetes/">Linode</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-09-16</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=xRgo9HDV_2I">Open Source Summit Europe</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-09-15</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=qIx53UfLmLc">SREday</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-09-15</td>
+        <td class="sched-talk">Policy as [versioned] Code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=uvGJSqSFCqg">Cloud with Chris</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-09-01</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=M4x2G8Toxno">Docker Community All Hands #6</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-08-24</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=tw5pWgVXO_g">Open Source Summit Latin America</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-06-08</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://twitter.com/CloudNativeWal/status/1534595387658477570">Cloud Native Wales</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-06-01</td>
+        <td class="sched-talk">Policy as [versioned] code</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=kujkYxU8HoM">Cloud Native London</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-04-06</td>
+        <td class="sched-talk">5 Things That Will Improve Your Kubernetes Security Posture</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.brighttalk.com/webcast/18932/528461">Appvia webinar</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-03-24</td>
+        <td class="sched-talk">Pod Security Policy is Dead, Long Live...?</td>
+        <td class="sched-where"><span class="venue-mode irl">irl</span><a href="https://www.youtube.com/watch?v=C5ohERIhlrY">Kubernetes and Kocktails</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-03-21</td>
+        <td class="sched-talk">Microservices Security Pattern in Kubernetes</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=k1TYMMxgldY">NGINX Microservices March</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-03-17</td>
+        <td class="sched-talk">Pod Security Policy is Dead, Long Live...?</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.brighttalk.com/webcast/18932/535753">Appvia webinar</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2022-02-28</td>
+        <td class="sched-talk">Is it time to put your pet kubernetes down</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.youtube.com/watch?v=4YA9sC6Z1YQ">Appvia webinar</a></td>
+      </tr>
+<tr class="recent-row">
+        <td class="sched-date">2021-06-21</td>
+        <td class="sched-talk">Juicy: Notorious B.I.G. Data</td>
+        <td class="sched-where"><span class="venue-mode v">virtual</span><a href="https://www.appvia.io/podcast/8901725">Appvia podcast</a></td>
+      </tr>
+  </tbody>
+</table>
+  <div class="schedule-more">End of catalogue</div>
+</div>
+
+
+<section class="booking-strip">
+  <div class="booking-grid">
+    <div>
+      <span class="booking-eyebrow">Bookings</span>
+      <h2 class="booking-title">Conferences, in-house <em>workshops,</em> podcasts &amp; the occasional debate.</h2>
+    </div>
+    <div class="booking-cta">
+      <p>Currently only considering offers from organisations who agree that bureaucracy is an impediment to progress.</p>
+      <a class="btn-on-pink" href="/cdn-cgi/l/email-protection#5d3e352f342e1d3e332e733038">Drop a line →</a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="colophon">
+  <div class="orn">🦩</div>
+  <div class="colophon-grid">
+    <div>
+      <h4 class="cl-h">Elsewhere</h4>
+      <ul class="cl-list">
+        <li><a href="https://cns.me">LinkedIn / cns.me</a></li>
+        <li><a href="https://blog.cns.me">Blog</a></li>
+        <li><a href="https://devpsyops.com">DevPsyOps</a></li>
+        <li><a href="https://github.com/chrisns">GitHub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="cl-h">Bookings</h4>
+      <p class="cl-p">Conferences, in-house workshops, podcasts and the occasional debate. Drop a line at <a href="/cdn-cgi/l/email-protection#11727963786251727f623f7c74"><span class="__cf_email__" data-cfemail="3d5e554f544e7d5e534e135058">[email&#160;protected]</span></a>.</p>
+    </div>
+  </div>
+  <p class="cl-foot">© <span class="numeral">2026</span> Chris Nesbitt-Smith — all words my own.</p>
+</footer>
+</main>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

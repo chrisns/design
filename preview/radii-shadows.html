@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Radii & shadows" subtitle="Square by default; pink glow reserved for primary CTA" viewport="700x300" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Radii & shadows</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body { margin:0; }
+  body { padding:28px 32px; background:var(--paper); }
+  .lbl { font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase;
+          color:var(--ink-4); margin:0 0 6px; }
+  .sw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:10px; }
+  .sw { height:64px; border:1px solid var(--paper-3); display:flex; align-items:flex-end; padding:6px; }
+  .sw span { font-family:var(--font-mono); font-size:9px; letter-spacing:0.06em; }
+  .row { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+</style>
+</head>
+<body>
+<p class="lbl">Radii — r-3 is the cap for cards, pill only for primary buttons</p><div class="row"><div style="width:78px;height:56px;background:var(--paper-2);border:1px solid var(--paper-3);border-radius:var(--r-0);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">r-0</span></div><div style="width:78px;height:56px;background:var(--paper-2);border:1px solid var(--paper-3);border-radius:var(--r-1);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">r-1</span></div><div style="width:78px;height:56px;background:var(--paper-2);border:1px solid var(--paper-3);border-radius:var(--r-2);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">r-2</span></div><div style="width:78px;height:56px;background:var(--paper-2);border:1px solid var(--paper-3);border-radius:var(--r-3);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">r-3</span></div><div style="width:78px;height:56px;background:var(--paper-2);border:1px solid var(--paper-3);border-radius:var(--r-pill);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">r-pill</span></div></div><p class="lbl" style="margin-top:18px">Shadows — the brand reads flat</p><div class="row"><div style="width:110px;height:60px;background:var(--bone);box-shadow:var(--sh-0);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">sh-0</span></div><div style="width:110px;height:60px;background:var(--bone);box-shadow:var(--sh-1);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">sh-1</span></div><div style="width:110px;height:60px;background:var(--bone);box-shadow:var(--sh-2);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">sh-2</span></div><div style="width:110px;height:60px;background:var(--bone);box-shadow:var(--sh-3);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">sh-3</span></div><div style="width:110px;height:60px;background:var(--bone);box-shadow:var(--sh-pink);display:flex;align-items:center;justify-content:center"><span class="lbl" style="margin:0">sh-pink</span></div></div>
+</body>
+</html>

@@ -1,0 +1,964 @@
+.container{
+  position:absolute;
+  transform:translate(-50%, -50%);
+  top:55%;
+  left:50%;
+}
+
+.glitch,
+.glow{
+  color:white;
+  position:relative;
+  font-size:5.5em;
+  animation:glitch 5s 5s infinite;
+}
+
+.glitch::before,
+.glow::before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:-5px 0 magenta;
+  overflow:hidden;
+  top:0;
+  animation:noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+}
+
+.glitch::after,
+.glow::after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:-5px 0 lightgreen;
+  overflow:hidden;
+  top:0;
+  animation:noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+}
+
+@keyframes glitch{
+  1%{
+    transform:rotateX(10deg) skewX(90deg);
+  }
+
+  2%{
+    transform:rotateX(0deg) skewX(0deg);
+  }
+}
+
+@keyframes noise-1{
+  3.3333333333%{
+    clip-path:inset(98px 0 1px 0);
+  }
+
+  6.6666666667%{
+    clip-path:inset(5px 0 9px 0);
+  }
+
+  10%{
+    clip-path:inset(79px 0 5px 0);
+  }
+
+  13.3333333333%{
+    clip-path:inset(75px 0 22px 0);
+  }
+
+  16.6666666667%{
+    clip-path:inset(36px 0 59px 0);
+  }
+
+  20%{
+    clip-path:inset(23px 0 32px 0);
+  }
+
+  23.3333333333%{
+    clip-path:inset(72px 0 23px 0);
+  }
+
+  26.6666666667%{
+    clip-path:inset(22px 0 37px 0);
+  }
+
+  30%{
+    clip-path:inset(3px 0 1px 0);
+  }
+
+  33.3333333333%{
+    clip-path:inset(74px 0 26px 0);
+  }
+
+  36.6666666667%{
+    clip-path:inset(78px 0 9px 0);
+  }
+
+  40%{
+    clip-path:inset(84px 0 7px 0);
+  }
+
+  43.3333333333%{
+    clip-path:inset(24px 0 48px 0);
+  }
+
+  46.6666666667%{
+    clip-path:inset(69px 0 9px 0);
+  }
+
+  50%{
+    clip-path:inset(10px 0 71px 0);
+  }
+
+  53.3333333333%{
+    clip-path:inset(28px 0 59px 0);
+  }
+
+  56.6666666667%{
+    clip-path:inset(50px 0 8px 0);
+  }
+
+  60%{
+    clip-path:inset(58px 0 6px 0);
+  }
+
+  63.3333333333%{
+    clip-path:inset(30px 0 69px 0);
+  }
+
+  66.6666666667%{
+    clip-path:inset(88px 0 9px 0);
+  }
+
+  70%{
+    clip-path:inset(40px 0 15px 0);
+  }
+
+  73.3333333333%{
+    clip-path:inset(15px 0 79px 0);
+  }
+
+  76.6666666667%{
+    clip-path:inset(21px 0 22px 0);
+  }
+
+  80%{
+    clip-path:inset(95px 0 3px 0);
+  }
+
+  83.3333333333%{
+    clip-path:inset(25px 0 60px 0);
+  }
+
+  86.6666666667%{
+    clip-path:inset(22px 0 45px 0);
+  }
+
+  90%{
+    clip-path:inset(58px 0 43px 0);
+  }
+
+  93.3333333333%{
+    clip-path:inset(49px 0 7px 0);
+  }
+
+  96.6666666667%{
+    clip-path:inset(66px 0 27px 0);
+  }
+
+  100%{
+    clip-path:inset(81px 0 15px 0);
+  }
+}
+
+@keyframes noise-2{
+  0%{
+    clip-path:inset(40px 0 44px 0);
+  }
+
+  3.3333333333%{
+    clip-path:inset(57px 0 25px 0);
+  }
+
+  6.6666666667%{
+    clip-path:inset(1px 0 57px 0);
+  }
+
+  10%{
+    clip-path:inset(76px 0 13px 0);
+  }
+
+  13.3333333333%{
+    clip-path:inset(33px 0 25px 0);
+  }
+
+  16.6666666667%{
+    clip-path:inset(35px 0 57px 0);
+  }
+
+  20%{
+    clip-path:inset(89px 0 2px 0);
+  }
+
+  23.3333333333%{
+    clip-path:inset(24px 0 34px 0);
+  }
+
+  26.6666666667%{
+    clip-path:inset(39px 0 10px 0);
+  }
+
+  30%{
+    clip-path:inset(83px 0 6px 0);
+  }
+
+  33.3333333333%{
+    clip-path:inset(61px 0 23px 0);
+  }
+
+  36.6666666667%{
+    clip-path:inset(5px 0 8px 0);
+  }
+
+  40%{
+    clip-path:inset(78px 0 14px 0);
+  }
+
+  43.3333333333%{
+    clip-path:inset(93px 0 8px 0);
+  }
+
+  46.6666666667%{
+    clip-path:inset(26px 0 4px 0);
+  }
+
+  50%{
+    clip-path:inset(52px 0 4px 0);
+  }
+
+  53.3333333333%{
+    clip-path:inset(18px 0 58px 0);
+  }
+
+  56.6666666667%{
+    clip-path:inset(63px 0 4px 0);
+  }
+
+  60%{
+    clip-path:inset(5px 0 78px 0);
+  }
+
+  63.3333333333%{
+    clip-path:inset(39px 0 62px 0);
+  }
+
+  66.6666666667%{
+    clip-path:inset(73px 0 12px 0);
+  }
+
+  70%{
+    clip-path:inset(69px 0 17px 0);
+  }
+
+  73.3333333333%{
+    clip-path:inset(66px 0 6px 0);
+  }
+
+  76.6666666667%{
+    clip-path:inset(66px 0 10px 0);
+  }
+
+  80%{
+    clip-path:inset(75px 0 3px 0);
+  }
+
+  83.3333333333%{
+    clip-path:inset(55px 0 45px 0);
+  }
+
+  86.6666666667%{
+    clip-path:inset(99px 0 2px 0);
+  }
+
+  90%{
+    clip-path:inset(16px 0 4px 0);
+  }
+
+  93.3333333333%{
+    clip-path:inset(84px 0 15px 0);
+  }
+
+  96.6666666667%{
+    clip-path:inset(59px 0 28px 0);
+  }
+
+  100%{
+    clip-path:inset(85px 0 2px 0);
+  }
+}
+
+.scanlines{
+  overflow:hidden;
+  mix-blend-mode:difference;
+}
+
+.scanlines::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 0.5%,
+    transparent 1%
+  );
+  animation:fudge 7s ease-in-out alternate infinite;
+}
+
+@keyframes fudge{
+  from{
+    transform:translate(0px, 0px);
+  }
+
+  to{
+    transform:translate(0px, 2%);
+  }
+}
+
+.glow{
+  text-shadow:0 0 1000px #dfbfbf;
+  color:transparent;
+  position:absolute;
+  top:0;
+}
+
+@keyframes glitch-2{
+  1%{
+    transform:rotateX(10deg) skewX(70deg);
+  }
+
+  2%{
+    transform:rotateX(0deg) skewX(0deg);
+  }
+}
+
+@import-theme "gaia";
+
+/*!
+* Marp / Marpit cns theme.
+ *
+ * @theme themes/cns
+ * @author Chris Nesbitt-Smith
+ *
+ * @auto-scaling true
+ * @size 4K 3840px 2160px
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+section.white{
+    background-color:#fff;
+  }
+
+section.end{
+    -webkit-text-stroke:0.03em black;
+  }
+
+section.end .container{
+      position:absolute;
+      top:50%;
+    }
+
+section.end h3{
+      color:rgb(223, 191, 191);
+      position:relative;
+      font-size:9vw;
+      animation:glitch 5s 5s infinite;
+      font-size:3em;
+      line-height:1em;
+      margin-top:0;
+    }
+
+section.end a{
+      color:#fff;
+      text-decoration:none;
+    }
+
+section.front h1{
+      -webkit-text-stroke:2px black;
+    }
+
+section.front h3{
+      font-weight:normal;
+    }
+
+section.front{
+
+    padding-top:10%;
+}
+
+section.front img{
+      width:30%;
+    }
+
+section.fade li,
+    section.fade h1,
+    section.fade p{
+      color:rgba(69, 90, 100, 0.2);
+    }
+
+section.fade strong{
+      color:rgba(69, 90, 100, 1);
+    }
+
+section.fade.invert strong{
+        color:rgba(255, 248, 225, 1);
+      }
+
+section.fade.invert li,
+      section.fade.invert h1,
+      section.fade.invert p{
+        color:rgba(255, 248, 225, 0.2);
+      }
+
+section{
+  font-weight:bold;
+}
+
+section[id="1"] p,
+    section[id="1"] h1{
+      text-shadow:2px 2px 4px rgb(69, 90, 100);
+    }
+
+section.listline.animate li{
+        animation-name:pulsate;
+        animation-timing-function:ease-in;
+        animation-delay:calc(var(--animation-order) * 200ms);
+        animation-duration:2s;
+        animation-iteration-count:infinite;
+      }
+
+section.listline.animate li:nth-child(1){
+            --animation-order:1;
+          }
+
+section.listline.animate li:nth-child(2){
+            --animation-order:2;
+          }
+
+section.listline.animate li:nth-child(3){
+            --animation-order:3;
+          }
+
+section.listline.animate li:nth-child(4){
+            --animation-order:4;
+          }
+
+section.listline.animate li:nth-child(5){
+            --animation-order:5;
+          }
+
+section.listline.animate li:nth-child(6){
+            --animation-order:6;
+          }
+
+section.listline.animate li:nth-child(7){
+            --animation-order:7;
+          }
+
+section.listline.animate li:nth-child(8){
+            --animation-order:8;
+          }
+
+section.listline.animate li:nth-child(9){
+            --animation-order:9;
+          }
+
+section.listline.animate li:nth-child(10){
+            --animation-order:10;
+          }
+
+section.listline.animate li:nth-child(11){
+            --animation-order:11;
+          }
+
+section.listline.animate li:nth-child(12){
+            --animation-order:12;
+          }
+
+section.listline.animate li:nth-child(13){
+            --animation-order:13;
+          }
+
+section.listline.animate li:nth-child(14){
+            --animation-order:14;
+          }
+
+section.listline.animate li:nth-child(15){
+            --animation-order:15;
+          }
+
+section.listline.animate li:nth-child(16){
+            --animation-order:16;
+          }
+
+section.listline.animate li:nth-child(17){
+            --animation-order:17;
+          }
+
+section.listline.animate li:nth-child(18){
+            --animation-order:18;
+          }
+
+section.listline.animate li:nth-child(19){
+            --animation-order:19;
+          }
+
+section.listline.animate li:nth-child(20){
+            --animation-order:20;
+          }
+
+section.listline.animate li:nth-child(21){
+            --animation-order:21;
+          }
+
+section.listline.animate li:nth-child(22){
+            --animation-order:22;
+          }
+
+section.listline.animate li:nth-child(23){
+            --animation-order:23;
+          }
+
+section.listline.animate li:nth-child(24){
+            --animation-order:24;
+          }
+
+section.listline.animate li:nth-child(25){
+            --animation-order:25;
+          }
+
+section.listline.animate li:nth-child(26){
+            --animation-order:26;
+          }
+
+section.listline.animate li:nth-child(27){
+            --animation-order:27;
+          }
+
+section.listline.animate li:nth-child(28){
+            --animation-order:28;
+          }
+
+section.listline.animate li:nth-child(29){
+            --animation-order:29;
+          }
+
+section.listline.animate li:nth-child(30){
+            --animation-order:30;
+          }
+
+section.listline.animate li:nth-child(31){
+            --animation-order:31;
+          }
+
+section.listline.animate li:nth-child(32){
+            --animation-order:32;
+          }
+
+section.listline.animate li:nth-child(33){
+            --animation-order:33;
+          }
+
+section.listline.animate li:nth-child(34){
+            --animation-order:34;
+          }
+
+section.listline.animate li:nth-child(35){
+            --animation-order:35;
+          }
+
+section.listline.animate li:nth-child(36){
+            --animation-order:36;
+          }
+
+section.listline.animate li:nth-child(37){
+            --animation-order:37;
+          }
+
+section.listline.animate li:nth-child(38){
+            --animation-order:38;
+          }
+
+section.listline.animate li:nth-child(39){
+            --animation-order:39;
+          }
+
+section.listline.animate li:nth-child(40){
+            --animation-order:40;
+          }
+
+section.listline.animate li:nth-child(41){
+            --animation-order:41;
+          }
+
+section.listline.animate li:nth-child(42){
+            --animation-order:42;
+          }
+
+section.listline.animate li:nth-child(43){
+            --animation-order:43;
+          }
+
+section.listline.animate li:nth-child(44){
+            --animation-order:44;
+          }
+
+section.listline.animate li:nth-child(45){
+            --animation-order:45;
+          }
+
+section.listline.animate li:nth-child(46){
+            --animation-order:46;
+          }
+
+section.listline.animate li:nth-child(47){
+            --animation-order:47;
+          }
+
+section.listline.animate li:nth-child(48){
+            --animation-order:48;
+          }
+
+section.listline.animate li:nth-child(49){
+            --animation-order:49;
+          }
+
+section.listline.animate li:nth-child(50){
+            --animation-order:50;
+          }
+
+section.listline.animate li:nth-child(51){
+            --animation-order:51;
+          }
+
+section.listline.animate li:nth-child(52){
+            --animation-order:52;
+          }
+
+section.listline.animate li:nth-child(53){
+            --animation-order:53;
+          }
+
+section.listline.animate li:nth-child(54){
+            --animation-order:54;
+          }
+
+section.listline.animate li:nth-child(55){
+            --animation-order:55;
+          }
+
+section.listline.animate li:nth-child(56){
+            --animation-order:56;
+          }
+
+section.listline.animate li:nth-child(57){
+            --animation-order:57;
+          }
+
+section.listline.animate li:nth-child(58){
+            --animation-order:58;
+          }
+
+section.listline.animate li:nth-child(59){
+            --animation-order:59;
+          }
+
+section.listline.animate li:nth-child(60){
+            --animation-order:60;
+          }
+
+section.listline.animate li:nth-child(61){
+            --animation-order:61;
+          }
+
+section.listline.animate li:nth-child(62){
+            --animation-order:62;
+          }
+
+section.listline.animate li:nth-child(63){
+            --animation-order:63;
+          }
+
+section.listline.animate li:nth-child(64){
+            --animation-order:64;
+          }
+
+section.listline.animate li:nth-child(65){
+            --animation-order:65;
+          }
+
+section.listline.animate li:nth-child(66){
+            --animation-order:66;
+          }
+
+section.listline.animate li:nth-child(67){
+            --animation-order:67;
+          }
+
+section.listline.animate li:nth-child(68){
+            --animation-order:68;
+          }
+
+section.listline.animate li:nth-child(69){
+            --animation-order:69;
+          }
+
+section.listline.animate li:nth-child(70){
+            --animation-order:70;
+          }
+
+section.listline.animate li:nth-child(71){
+            --animation-order:71;
+          }
+
+section.listline.animate li:nth-child(72){
+            --animation-order:72;
+          }
+
+section.listline.animate li:nth-child(73){
+            --animation-order:73;
+          }
+
+section.listline.animate li:nth-child(74){
+            --animation-order:74;
+          }
+
+section.listline.animate li:nth-child(75){
+            --animation-order:75;
+          }
+
+section.listline.animate li:nth-child(76){
+            --animation-order:76;
+          }
+
+section.listline.animate li:nth-child(77){
+            --animation-order:77;
+          }
+
+section.listline.animate li:nth-child(78){
+            --animation-order:78;
+          }
+
+section.listline.animate li:nth-child(79){
+            --animation-order:79;
+          }
+
+section.listline.animate li:nth-child(80){
+            --animation-order:80;
+          }
+
+section.listline.animate li:nth-child(81){
+            --animation-order:81;
+          }
+
+section.listline.animate li:nth-child(82){
+            --animation-order:82;
+          }
+
+section.listline.animate li:nth-child(83){
+            --animation-order:83;
+          }
+
+section.listline.animate li:nth-child(84){
+            --animation-order:84;
+          }
+
+section.listline.animate li:nth-child(85){
+            --animation-order:85;
+          }
+
+section.listline.animate li:nth-child(86){
+            --animation-order:86;
+          }
+
+section.listline.animate li:nth-child(87){
+            --animation-order:87;
+          }
+
+section.listline.animate li:nth-child(88){
+            --animation-order:88;
+          }
+
+section.listline.animate li:nth-child(89){
+            --animation-order:89;
+          }
+
+section.listline.animate li:nth-child(90){
+            --animation-order:90;
+          }
+
+section.listline.animate li:nth-child(91){
+            --animation-order:91;
+          }
+
+section.listline.animate li:nth-child(92){
+            --animation-order:92;
+          }
+
+section.listline.animate li:nth-child(93){
+            --animation-order:93;
+          }
+
+section.listline.animate li:nth-child(94){
+            --animation-order:94;
+          }
+
+section.listline.animate li:nth-child(95){
+            --animation-order:95;
+          }
+
+section.listline.animate li:nth-child(96){
+            --animation-order:96;
+          }
+
+section.listline.animate li:nth-child(97){
+            --animation-order:97;
+          }
+
+section.listline.animate li:nth-child(98){
+            --animation-order:98;
+          }
+
+section.listline.animate li:nth-child(99){
+            --animation-order:99;
+          }
+
+section.listline.animate li:nth-child(100){
+            --animation-order:100;
+          }
+
+section.listline ul{
+      text-align:center;
+    }
+
+section.listline ul li{
+        display:inline;
+      }
+
+section.listline ul li:not(:first-of-type):before{
+          content:" | ";
+          opacity:0.2;
+        }
+
+section.title-page{
+    background:linear-gradient(
+      60deg,
+      rgba(40, 40, 40, 1) 0%,
+      rgba(80, 80, 80, 1) 100%
+    );
+    color:white;
+    padding:0;
+    text-align:left;
+  }
+
+section.title-page .waves{
+      position:absolute;
+      bottom:25%;
+      width:100%;
+      max-height:30%;
+      z-index:1;
+    }
+
+section.title-page h1{
+      z-index:1;
+      padding:3%;
+      position:absolute;
+      font-weight:normal;
+      font-size:2.5em;
+    }
+
+section.title-page h2{
+      position:absolute;
+    }
+
+section.title-page h2,
+    section.title-page h3{
+      position:absolute;
+      width:100%;
+      padding:0 3%;
+    }
+
+section.title-page h2{
+      color:rgba(40, 40, 40, 1);
+      bottom:0;
+      font-size:2.5em;
+      height:25%;
+      background-color:white;
+    }
+
+section.title-page h3{
+      z-index:1;
+      color:rgba(80, 80, 80, 1);
+      bottom:0;
+      padding-bottom:4vh;
+      font-size:1em;
+    }
+
+section.title-page .glitch.emoji{
+      z-index:2;
+      position:absolute;
+      font-size:10em;
+      right:50px;
+      top:20%;
+    }
+
+section.title-page .parallax > use{
+      animation:move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    }
+
+section.title-page .parallax > use:nth-child(1){
+      animation-delay:-2s;
+      animation-duration:7s;
+    }
+
+section.title-page .parallax > use:nth-child(2){
+      animation-delay:-3s;
+      animation-duration:10s;
+    }
+
+section.title-page .parallax > use:nth-child(3){
+      animation-delay:-4s;
+      animation-duration:13s;
+    }
+
+section.title-page .parallax > use:nth-child(4){
+      animation-delay:-5s;
+      animation-duration:20s;
+    }
+
+@keyframes move-forever{
+      0%{
+        transform:translate3d(-90px, 0, 0);
+      }
+      100%{
+        transform:translate3d(85px, 0, 0);
+      }
+    }
+
+@keyframes blinker{
+  50%{
+    -webkit-text-stroke:0.02em blue;
+  }
+}
+
+@keyframes pulsate{
+  0%{
+    opacity:1;
+  }
+  50%{
+    opacity:0.25;
+  }
+  100%{
+    opacity:1;
+  }
+}

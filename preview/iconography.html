@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Iconography" subtitle="Typographic ornaments first; SVG only for external identities" viewport="700x240" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Iconography</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body { margin:0; }
+  body { padding:28px 32px; background:var(--paper); }
+  .lbl { font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase;
+          color:var(--ink-4); margin:0 0 6px; }
+  .sw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:10px; }
+  .sw { height:64px; border:1px solid var(--paper-3); display:flex; align-items:flex-end; padding:6px; }
+  .sw span { font-family:var(--font-mono); font-size:9px; letter-spacing:0.06em; }
+  .row { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+</style>
+</head>
+<body>
+<p class="lbl">Ornaments — the primary icon system</p><p style="font-family:var(--font-display);font-size:34px;color:var(--ink);margin:0 0 6px">§ &nbsp; ❦ &nbsp; † &nbsp; ‡ &nbsp; · &nbsp; — &nbsp; 🦩</p><p class="lbl" style="margin:0 0 18px;color:var(--ink-3)">No emoji anywhere else. Ever.</p><p class="lbl">Identity marks — currentColor, sized to line-height</p><div class="row" style="color:var(--ink)"><img src="../assets/icons/github.svg" width="22" alt="github"><img src="../assets/icons/linkedin.svg" width="22" alt="linkedin"><img src="../assets/icons/mail.svg" width="22" alt="mail"><img src="../assets/icons/external.svg" width="22" alt="external"></div>
+</body>
+</html>
