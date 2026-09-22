@@ -40,6 +40,20 @@ code{font-family:var(--font-mono);font-size:.92em}
 .install code{padding:14px 16px;font-size:13px;color:var(--ink);overflow-x:auto;white-space:nowrap;flex:1 1 0;min-width:0;align-self:center}
 .copy-btn{font-family:var(--font-body);font-weight:600;font-size:13px;border:0;border-left:1px solid var(--ink);background:var(--ink);color:var(--bone);padding:0 20px;cursor:pointer;transition:background .2s}
 .copy-btn:hover{background:var(--pink)}.copy-btn.done{background:var(--pink-deep)}
+
+/* form fields — square, hairline, pink focus. A field inside a strip drops its
+   own border, because the strip already supplies the frame. */
+.field{font-family:var(--font-body);font-size:16px;line-height:1.4;color:var(--ink);background:var(--bone);border:1px solid var(--ink);border-radius:0;padding:13px 16px;width:100%;min-width:0}
+.field::placeholder{color:var(--ink-4)}
+.field:focus{outline:2px solid var(--pink);outline-offset:-2px}
+.field:disabled{background:var(--paper-2);color:var(--ink-4);cursor:not-allowed}
+.field.is-error{border-color:var(--pink-deep)}
+.field-label{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 8px}
+.field-hint{font-size:13px;color:var(--ink-3);margin:8px 0 0}
+.field-hint.is-error{color:var(--pink-deep)}
+.install form{display:flex;align-items:stretch;width:100%;min-width:0}
+.install .field{border:0;flex:1 1 0;width:auto}
+.install.is-error{border-color:var(--pink-deep)}
 .hero-fine{font-size:13px;color:var(--ink-3);margin:0}
 .hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 24px;padding-bottom:8px}
 .stat{display:flex;flex-direction:column;gap:4px;border-left:2px solid var(--pink);padding-left:14px}

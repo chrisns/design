@@ -41,7 +41,7 @@ That confirmed what the sites are: hand-pasted copies of one system that has sin
 | `preview/*.html` | Cards for the Claude Design pane. Each links the real kit CSS and uses real class names, so a preview cannot drift from the thing it documents. |
 | `ui_kits/blog/` | blog.cns.me — masthead, lead post, post grid, year archive, prose, figures, author block. |
 | `ui_kits/talks/` | talks.cns.me — guilloche masthead, hero, talk grid, schedule, booking strip, colophon. |
-| `ui_kits/govbuy/` | govbuy.run.cns.me — the data-dense app surfaces: tables, stat rows, bars, chips, connector cards. |
+| `ui_kits/govbuy/` | govbuy.run.cns.me — the data-dense app surfaces: tables, stat rows, bars, chips, connector cards, form fields. |
 | `ui_kits/slides-legacy/` | The marp slide theme, **unconverted**. See below. |
 | `assets/` | Logos, icons, sample imagery. |
 | `scripts/check.mjs` | `npm test`. Guards the invariants below. |

@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Form field" subtitle="Square, hairline, pink focus — standalone and inside an .install strip" viewport="700x320" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Form field</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../ui_kits/govbuy/govbuy.css">
+<style>
+  html,body { margin:0; }
+  body { padding:28px 32px; background:var(--paper); font-family:var(--font-body); color:var(--ink); }
+  .stack { display:flex; flex-direction:column; gap:22px; max-width:560px; }
+</style>
+</head>
+<body>
+<div class="stack">
+  <div>
+    <label class="field-label" for="a">Newsletter URL</label>
+    <input class="field" id="a" type="text" value="https://www.linkedin.com/newsletters/...">
+    <p class="field-hint">Accepts a full URL or a bare slug.</p>
+  </div>
+  <div>
+    <label class="field-label" for="b">With an error</label>
+    <input class="field is-error" id="b" type="text" value="not-a-url">
+    <p class="field-hint is-error">That is not a newsletter address.</p>
+  </div>
+  <div>
+    <p class="field-label">Inside a strip</p>
+    <div class="install">
+      <form>
+        <input class="field" type="text" placeholder="https://www.linkedin.com/newsletters/&hellip;">
+        <button class="copy-btn" type="submit">Get feed</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <p class="field-label">Disabled</p>
+    <input class="field" type="text" value="Not available" disabled>
+  </div>
+</div>
+</body>
+</html>
